@@ -170,8 +170,6 @@
 
   <!-- SECTION 1: HERO SECTION -->
   <section id="home" class="hero-section d-flex align-items-center">
-    <div id="hero-3d-canvas"></div>
-
     <div class="container position-relative" style="z-index: 2;">
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-7 text-center text-lg-start hero-content">
@@ -254,10 +252,10 @@
         </div>
 
         <div class="col-lg-5 mt-5 mt-lg-0 text-center position-relative">
-          <div class="hero-image-wrapper position-relative d-inline-block">
-            <img src="image/scj.jpg" alt="SafeShield Certified Technician at Work" decoding="async"
-              class="img-fluid rounded-4 shadow-lg border border-white border-4"
-              style="max-height:520px; object-fit:cover;">
+          <div class="hero-image-wrapper position-relative d-inline-block w-100">
+            <video class="img-fluid rounded-4 shadow-lg border border-white border-4 w-100" autoplay loop muted playsinline style="max-height:520px; object-fit:cover;">
+              <source src="video/4145551-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
 
             <!-- Floating 3D Badge 1 -->
             <div class="hero-floating-card" style="top: -20px; left: -20px;">
@@ -342,10 +340,10 @@
         </div>
 
         <div class="col-lg-6 order-1 order-lg-2 text-center position-relative">
-          <div class="hero-image-wrapper position-relative d-inline-block">
-            <img src="image/aqa.jpg" alt="Home 2 Emergency Defense Team" decoding="async"
-              class="img-fluid rounded-4 shadow-lg border border-white border-4"
-              style="max-height:500px; width:100%; object-fit:cover;">
+          <div class="hero-image-wrapper position-relative d-inline-block w-100">
+            <video class="img-fluid rounded-4 shadow-lg border border-white border-4 w-100" autoplay loop muted playsinline style="max-height:500px; object-fit:cover;">
+              <source src="video/6197561-uhd_3840_2160_25fps.mp4" type="video/mp4">
+            </video>
 
             <!-- Home 2 Floating Badge -->
             <div class="hero-floating-card" style="top: 10px; right: -10px;">
@@ -371,6 +369,27 @@
         <h2 class="section-title">Healthcare-Grade Standards For Your Peace of Mind</h2>
         <p class="section-subtitle">We combine advanced biotechnology, thermal imaging, and WHO-approved formulations to
           eradicate pests without compromising indoor air quality.</p>
+      </div>
+
+      <!-- About Section Video Feature Banner -->
+      <div class="row align-items-center mb-5 p-4 rounded-4 glass-card shadow-lg border border-secondary border-opacity-25">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+            <video class="w-100 rounded-4" style="max-height:360px; object-fit:cover;" autoplay loop muted playsinline>
+              <source src="video/6415826-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6 ps-lg-4 text-center text-lg-start">
+          <span class="badge bg-teal-subtle text-teal fw-bold mb-2 px-3 py-2 rounded-pill" style="background:rgba(20,184,166,0.15); color:var(--primary);">SafeShield In Action</span>
+          <h3 class="h3 font-heading text-dark mb-3">Pioneering Eco-Biotech & Thermal Eradication</h3>
+          <p class="text-muted mb-3">Watch our certified field specialists perform hospital-grade eco-friendly pest inspection and precision fumigation in real-time environments.</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> Hospital-Grade Non-Toxic Formulations</li>
+            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> Thermal & Acoustic Void Detection</li>
+            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> 100% Guaranteed Nest Eradication</li>
+          </ul>
+        </div>
       </div>
 
       <div class="row g-4 gsap-stagger-container">
@@ -468,6 +487,31 @@
       </div>
 
       <div class="row g-4 mt-2">
+        <!-- Featured Treatment Video Banner -->
+        <div class="col-12 mb-2 treatment-item" data-category="emergency">
+          <div class="glass-card p-4 rounded-4 shadow-sm border border-secondary border-opacity-25 overflow-hidden">
+            <div class="row align-items-center">
+              <div class="col-lg-6 mb-3 mb-lg-0">
+                <div class="position-relative overflow-hidden rounded-4 shadow-sm">
+                  <video class="w-100 rounded-4" style="max-height:320px; object-fit:cover;" autoplay loop muted playsinline>
+                    <source src="video/9153845-uhd_4096_2160_30fps.mp4" type="video/mp4">
+                  </video>
+                  <span class="position-absolute top-0 start-0 m-3 badge bg-danger text-white px-3 py-2 rounded-pill shadow-sm">Live Field Execution</span>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center text-lg-start ps-lg-4">
+                <span class="treatment-badge bg-teal text-white mb-2 d-inline-block px-3 py-1 rounded-pill" style="background:var(--primary);">Specialized & Emergency</span>
+                <h3 class="h4 font-heading text-dark mb-2">High-Capacity Whole-Facility Fumigation</h3>
+                <p class="text-muted small mb-3">Enterprise-grade deep thermal aerosol gas diffusion for severe infestations, food processing plants, warehouses, and multi-unit residential complexes.</p>
+                <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                  <span class="fw-bold text-teal fs-5">Custom Facility Assessment</span>
+                  <a href="#book-inspection" class="btn btn-shield-primary">Request Live Assessment</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- 1. Cockroach Control -->
         <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
           <div class="treatment-card" data-tilt>
@@ -1847,8 +1891,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <!-- GLightbox JS -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
-  <!-- Three.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 
   <!-- Custom Main JS -->
   <script src="js/main.js" defer></script>
