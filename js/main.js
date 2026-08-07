@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // HIGH PERFORMANCE NATIVE INTERSECTION OBSERVER ANIMATIONS
   initScrollAnimations();
 
+  // DIAGNOSTIC RISK CALCULATOR
+  initRiskCalculator();
+
   // SWIPER TESTIMONIALS
   if (document.querySelector('.swiper-testimonials')) {
     new Swiper('.swiper-testimonials', {
@@ -413,4 +416,42 @@ function initThemeAndRTL() {
     });
   });
 }
+
+/* Diagnostic Risk Calculator Interaction */
+function initRiskCalculator() {
+  const pestBtns = document.querySelectorAll('[data-pest]');
+  const areaBtns = document.querySelectorAll('[data-area]');
+  const protocolText = document.getElementById('calcProtocolText');
+  const timeText = document.getElementById('calcTimeText');
+
+  if (!protocolText || !timeText) return;
+
+  const protocols = {
+    cockroach: { text: "Micro-Encapsulated Bio-Barrier + Dual-Action Nest Elimination Gel Baiting System.", time: "24 to 48 Hours" },
+    bedbug: { text: "Deep Thermal Steam Diffusion + Sub-Micron Aerosol Egg Sterilization Protocol.", time: "12 to 24 Hours" },
+    termite: { text: "Precision Soil Barrier Injection + Acoustic Void Colony Elimination Matrix.", time: "48 to 72 Hours" },
+    rodent: { text: "Multi-Catch Ultrasonic Exclusion Barriers + Sanitary Structural Sealing.", time: "24 to 36 Hours" },
+    ant: { text: "Pheromone Trail Disruptor + Bio-Targeted Colony Eradication Granules.", time: "12 to 24 Hours" }
+  };
+
+  pestBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      pestBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const pest = btn.getAttribute('data-pest');
+      if (protocols[pest]) {
+        protocolText.textContent = protocols[pest].text;
+        timeText.textContent = protocols[pest].time;
+      }
+    });
+  });
+
+  areaBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      areaBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+}
+
 

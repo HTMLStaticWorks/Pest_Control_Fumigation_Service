@@ -284,75 +284,183 @@
     </div>
   </section>
 
-  <!-- SECTION 1B: HOME 2 - EMERGENCY & COMMERCIAL PEST DEFENSE HERO -->
-  <section id="home2"
-    class="hero-section hero-home2-section d-flex align-items-center py-5 position-relative border-top border-bottom border-light">
-    <div class="container position-relative py-4" style="z-index: 2;">
+  <!-- SECTION 1.1: HOME 1 — INTERACTIVE PEST RISK DIAGNOSTIC CALCULATOR -->
+  <section id="home1-diagnostic" class="py-5 position-relative bg-white border-top border-light">
+    <div class="container py-4">
+      <div class="text-center mb-5 gsap-fade-up">
+        <span class="section-tag"><i data-lucide="calculator" style="width:16px;"></i> Interactive Diagnostic Tool</span>
+        <h2 class="section-title">Instant Pest Risk & Treatment Estimator</h2>
+        <p class="section-subtitle">Select your active property symptoms to evaluate threat level and receive an instant hospital-grade treatment protocol recommendation.</p>
+      </div>
+
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-10">
+          <div class="risk-calc-box p-4 p-md-5">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <label class="form-label font-heading fw-bold text-dark mb-2">1. Select Observed Pest Activity:</label>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <button type="button" class="calc-option-btn active" data-pest="cockroach">🪳 Cockroaches</button>
+                  <button type="button" class="calc-option-btn" data-pest="bedbug">🛏️ Bed Bugs</button>
+                  <button type="button" class="calc-option-btn" data-pest="termite">🪵 Termites</button>
+                  <button type="button" class="calc-option-btn" data-pest="rodent">🐀 Rodents & Rats</button>
+                  <button type="button" class="calc-option-btn" data-pest="ant">🐜 Ants & Wasps</button>
+                </div>
+
+                <label class="form-label font-heading fw-bold text-dark mb-2">2. Affected Area Type:</label>
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  <button type="button" class="calc-option-btn active" data-area="residential">🏠 Residential Home</button>
+                  <button type="button" class="calc-option-btn" data-area="commercial">🏢 Commercial Facility</button>
+                  <button type="button" class="calc-option-btn" data-area="food">🍽️ Restaurant / Kitchen</button>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="p-4 rounded-4 text-white" style="background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <span class="small font-heading text-uppercase text-teal fw-semibold">Diagnostic Report</span>
+                    <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold">High Priority</span>
+                  </div>
+                  <h4 class="h5 font-heading mb-2 text-white">Recommended Protocol:</h4>
+                  <p class="small opacity-75 mb-3" id="calcProtocolText">Micro-Encapsulated Bio-Barrier + Dual-Action Nest Elimination Gel Baiting System.</p>
+                  
+                  <div class="pt-3 border-top border-white border-opacity-25 d-flex align-items-center justify-content-between">
+                    <div>
+                      <div class="small opacity-75">Estimated Elimination Time:</div>
+                      <div class="fw-bold fs-5 text-white" id="calcTimeText">24 to 48 Hours</div>
+                    </div>
+                    <a href="#book-inspection" class="btn btn-shield-accent btn-sm">
+                      <i data-lucide="check-circle-2" style="width:16px;"></i> Book Audit
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1.2: HOME 1 — 4-STEP BIO-SHIELD ERADICATION WORKFLOW -->
+  <section id="home1-workflow" class="py-5 position-relative" style="background:var(--light-bg);">
+    <div class="container py-4">
+      <div class="text-center mb-5 gsap-fade-up">
+        <span class="section-tag"><i data-lucide="shield-check" style="width:16px;"></i> Eradication Standard</span>
+        <h2 class="section-title">Our 4-Phase Hospital-Grade Protocol</h2>
+        <p class="section-subtitle">Tested across 10,000+ facilities to guarantee complete pest elimination without toxic chemical residual traces.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="process-step-num mb-3 mx-auto mx-lg-0">01</div>
+              <h4 class="h5 font-heading text-dark mb-2">Thermal Void Scan</h4>
+              <p class="text-muted small mb-0">Infrared acoustic sensor audit to map hidden nests behind walls, ceilings, and under floors.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="process-step-num mb-3 mx-auto mx-lg-0" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); color:#0F172A;">02</div>
+              <h4 class="h5 font-heading text-dark mb-2">Bio-Formulation</h4>
+              <p class="text-muted small mb-0">WHO-approved micro-encapsulated non-repellent active formula safe for children, pets, and food prep areas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="process-step-num mb-3 mx-auto mx-lg-0">03</div>
+              <h4 class="h5 font-heading text-dark mb-2">Aerosol Diffusion</h4>
+              <p class="text-muted small mb-0">Sub-micron fogging and barrier dispersion targeting core breeding colonies for 100% eradication.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="process-step-num mb-3 mx-auto mx-lg-0" style="background: linear-gradient(135deg, var(--accent) 0%, #65A30D 100%); color:#0F172A;">04</div>
+              <h4 class="h5 font-heading text-dark mb-2">Warranty Audit</h4>
+              <p class="text-muted small mb-0">Official certificate issuance + 365-day re-treatment warranty and perimeter barrier verification.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1B: HOME 2 — REDESIGNED EMERGENCY & COMMERCIAL COMMAND CENTER HERO -->
+  <section id="home2" class="hero-section hero-home2-redesign d-flex align-items-center py-5 position-relative">
+    <div class="container position-relative py-5" style="z-index: 2;">
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start mt-4 mt-lg-0 hero-content">
-          <div class="hero-badge bg-warning bg-opacity-10 text-dark border-warning mb-3">
-            <i data-lucide="zap" class="text-warning me-1" style="width:16px; height:16px;"></i>
-            <span>HOME 2 — 24/7 Emergency & Commercial Defense</span>
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-warning bg-opacity-20 text-warning border border-warning border-opacity-50 mb-3">
+            <span class="pulse-live" style="background:#F59E0B;"></span>
+            <span class="small font-heading fw-bold text-uppercase">HOME 2 — 24/7 Rapid Emergency Command</span>
           </div>
 
-          <h1 class="hero-title text-dark">
-            Rapid Response <span class="text-gradient">Commercial & Home</span> Eradication
+          <h1 class="hero-title text-white">
+            High-Capacity Industrial & Emergency <span class="text-gradient">Fumigation Defense</span>
           </h1>
 
-          <p class="hero-subtitle text-muted fs-5 mb-4 me-lg-4">
-            Specialized high-capacity fumigation, hospital-grade sanitation, and rapid 45-minute emergency technician
-            dispatch for high-risk residential & enterprise facilities.
+          <p class="hero-subtitle text-light opacity-75 fs-5 mb-4 me-lg-4">
+            Rapid 45-minute dispatch for urgent infestations in high-risk residential, hospital, food-processing, and enterprise commercial complexes.
           </p>
 
-          <!-- Quick Stats Grid for Home 2 -->
+          <!-- Home 2 Command Metrics Bar -->
           <div class="row g-3 mb-4">
             <div class="col-6 col-sm-4">
-              <div class="glass-card p-3 text-center h-100">
+              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-10">
                 <div class="font-heading fw-bold text-teal fs-3">45 Min</div>
-                <div class="small text-muted">Emergency Dispatch</div>
+                <div class="small text-white opacity-75">Emergency Dispatch</div>
               </div>
             </div>
             <div class="col-6 col-sm-4">
-              <div class="glass-card p-3 text-center h-100">
-                <div class="font-heading fw-bold text-teal fs-3">100%</div>
-                <div class="small text-muted">Sterilization Rate</div>
+              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-10">
+                <div class="font-heading fw-bold text-accent fs-3">100%</div>
+                <div class="small text-white opacity-75">Sterilization Rate</div>
               </div>
             </div>
             <div class="col-12 col-sm-4">
-              <div class="glass-card p-3 text-center h-100">
-                <div class="font-heading fw-bold text-teal fs-3">0 Odor</div>
-                <div class="small text-muted">Bio-Safe Chemical Formula</div>
+              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-10">
+                <div class="font-heading fw-bold text-warning fs-3">24 / 7</div>
+                <div class="small text-white opacity-75">Live Command Center</div>
               </div>
             </div>
           </div>
 
-          <div
-            class="hero-cta-wrap d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
+          <div class="hero-cta-wrap d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-4">
             <a href="tel:18005557443" class="btn btn-shield-accent btn-lg">
               <i data-lucide="phone-call" style="width:20px; height:20px;"></i>
-              24/7 Hotline: 1-800-555-SHIELD
+              24/7 Emergency: 1-800-555-SHIELD
             </a>
             <a href="#book-inspection" class="btn btn-shield-primary btn-lg">
               <i data-lucide="calendar-check" style="width:20px; height:20px;"></i>
-              Book Home 2 Service
+              Book Home 2 Command
             </a>
           </div>
         </div>
 
         <div class="col-lg-6 order-1 order-lg-2 text-center position-relative">
-          <div class="hero-image-wrapper position-relative d-inline-block w-100">
-            <video class="img-fluid rounded-4 shadow-lg border border-white border-4 w-100" autoplay loop muted playsinline style="max-height:500px; object-fit:cover;">
+          <div class="video-glow-wrapper w-100">
+            <video class="img-fluid rounded-4 w-100" autoplay loop muted playsinline style="max-height:500px; object-fit:cover;">
               <source src="video/6197561-uhd_3840_2160_25fps.mp4" type="video/mp4">
             </video>
 
-            <!-- Home 2 Floating Badge -->
-            <div class="hero-floating-card" style="top: 10px; right: -10px;">
+            <!-- Home 2 Floating Live Dispatch Badge -->
+            <div class="hero-floating-card glass-dark border border-teal text-white" style="top: 15px; right: 15px; background: rgba(15, 23, 42, 0.95);">
               <div class="rounded-circle p-2 bg-teal text-white">
                 <i data-lucide="shield-alert" style="width:22px;"></i>
               </div>
               <div class="text-start">
-                <div class="fw-bold text-dark small">Active Emergency Team</div>
-                <div class="text-teal font-heading fw-semibold" style="font-size:0.75rem;">● 12 Units On Duty</div>
+                <div class="fw-bold text-white small">Active Emergency Team</div>
+                <div class="text-teal font-heading fw-semibold" style="font-size:0.75rem;"><span class="pulse-live me-1"></span> 14 Rapid Units On Duty</div>
               </div>
             </div>
           </div>
