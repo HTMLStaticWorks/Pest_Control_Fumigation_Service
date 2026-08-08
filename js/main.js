@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Mobile Offcanvas Auto Close on Link Click
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileNavClickables = document.querySelectorAll('.mobile-nav-link:not([data-bs-toggle]), .mobile-nav-sublink');
   const offcanvasElem = document.getElementById('mobileNavDrawer');
   if (offcanvasElem && typeof bootstrap !== 'undefined') {
-    mobileNavLinks.forEach(link => {
+    mobileNavClickables.forEach(link => {
       link.addEventListener('click', () => {
         const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElem);
         if (bsOffcanvas) bsOffcanvas.hide();
@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // HIGH PERFORMANCE NATIVE INTERSECTION OBSERVER ANIMATIONS
   initScrollAnimations();
+
+  // DYNAMIC NAVBAR SCROLLSPY
+  initScrollSpy();
 
   // DIAGNOSTIC RISK CALCULATOR
   initRiskCalculator();
@@ -384,14 +387,6 @@ function initThemeAndRTL() {
       localStorage.setItem('safeshield_rtl', 'false');
     }
     rtlBtns.forEach(btn => {
-      const icon = btn.querySelector('i');
-      if (icon) {
-        if (isRTL) {
-          icon.setAttribute('data-lucide', 'align-left');
-        } else {
-          icon.setAttribute('data-lucide', 'align-right');
-        }
-      }
       const label = btn.querySelector('#rtlLabelMobile') || btn.querySelector('span');
       if (label) {
         label.textContent = isRTL ? 'LTR' : 'RTL';
@@ -453,5 +448,56 @@ function initRiskCalculator() {
     });
   });
 }
+
+/* Dynamic ScrollSpy for Navbar Links */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.desktop-nav-menu .nav-link-custom, .mobile-nav-list .mobile-nav-link, .mobile-nav-sublink');
+  const homeDropdown = document.getElementById('homeDropdown');
+
+  if (!sections.length || !navLinks.length) return;
+
+  function updateActiveLink() {
+    let scrollPos = window.scrollY + 200;
+    let activeSectionId = '';
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (scrollPos >= top && scrollPos < top + height) {
+        activeSectionId = id;
+      }
+    });
+
+    // Default to home if near the very top of page
+    if (!activeSectionId && window.scrollY < 300) {
+      activeSectionId = 'home';
+    }
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === '#' + activeSectionId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+
+    // Highlight Home dropdown ONLY when Home 1 (#home) or Home 2 (#home2) is active
+    if (homeDropdown) {
+      if (activeSectionId === 'home' || activeSectionId === 'home2') {
+        homeDropdown.classList.add('active');
+      } else {
+        homeDropdown.classList.remove('active');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
+}
+
 
 

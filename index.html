@@ -43,7 +43,7 @@
     <div class="loader-shield">
       <i data-lucide="shield-check" class="text-teal" style="width:32px; height:32px;"></i>
     </div>
-    <div class="mt-3 font-heading fw-bold text-white fs-5">SAFESHIELD PEST CONTROL</div>
+    <div class="mt-3 brand-title font-heading fw-bold text-white fs-5">SAFESHIELD PEST CONTROL</div>
     <div class="text-muted small">Loading Healthcare-Grade Protection...</div>
   </div>
 
@@ -62,7 +62,7 @@
       <div class="collapse navbar-collapse desktop-nav-menu" id="desktopNavbar">
         <ul class="navbar-menu nav mx-auto align-items-center">
           <li class="nav-item dropdown">
-            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="homeDropdown" role="button"
+            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="homeDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Home <i data-lucide="chevron-down" class="ms-1" style="width:14px; height:14px;"></i>
             </a>
@@ -90,7 +90,12 @@
             <i data-lucide="moon" id="themeIcon" style="width:18px; height:18px;"></i>
           </button>
           <button id="rtlToggleBtn" class="btn-nav-action" title="Toggle LTR / RTL Mode" aria-label="Toggle RTL">
-            <i data-lucide="align-right" id="rtlIcon" style="width:18px; height:18px;"></i>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIcon">
+              <path d="M20 7H4"></path>
+              <path d="m9 3-5 4 5 4"></path>
+              <path d="M4 17h16"></path>
+              <path d="m15 13 5 4-5 4"></path>
+            </svg>
           </button>
           <a href="#book" class="btn btn-shield-primary ms-1">
             <i data-lucide="calendar-check" style="width:18px; height:18px;"></i>
@@ -132,29 +137,41 @@
           <span class="small fw-semibold">Theme</span>
         </button>
         <button id="rtlToggleBtnMobile" class="btn btn-sm text-white rounded-pill px-3 d-flex align-items-center gap-2" style="background:rgba(255,255,255,0.15);" title="Toggle LTR/RTL Layout">
-          <i data-lucide="align-right" id="rtlIconMobile" style="width:16px; height:16px;"></i>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIconMobile">
+            <path d="M20 7H4"></path>
+            <path d="m9 3-5 4 5 4"></path>
+            <path d="M4 17h16"></path>
+            <path d="m15 13 5 4-5 4"></path>
+          </svg>
           <span class="small fw-semibold" id="rtlLabelMobile">RTL</span>
         </button>
       </div>
 
-      <div class="mobile-nav-list d-flex flex-column gap-2 text-center">
-        <a href="#home" class="mobile-nav-link active justify-content-center"><i data-lucide="home"
-            style="width:20px;"></i> Home 1 (Healthcare)</a>
-        <a href="#home2" class="mobile-nav-link justify-content-center"><i data-lucide="zap" style="width:20px;"></i>
-          Home 2 (Emergency Response)</a>
-        <a href="#about" class="mobile-nav-link justify-content-center"><i data-lucide="award" style="width:20px;"></i>
-          About Us</a>
-        <a href="#treatments" class="mobile-nav-link justify-content-center"><i data-lucide="bug"
-            style="width:20px;"></i> Treatments</a>
-        <a href="#packages" class="mobile-nav-link justify-content-center"><i data-lucide="box" style="width:20px;"></i>
-          Packages</a>
-        <a href="#safety" class="mobile-nav-link justify-content-center"><i data-lucide="heart-handshake"
-            style="width:20px;"></i> Chemical Safety</a>
-        <a href="#pricing" class="mobile-nav-link justify-content-center"><i data-lucide="dollar-sign"
-            style="width:20px;"></i> Pricing</a>
+      <div class="mobile-nav-list d-flex flex-column gap-2">
+        <!-- Home Dropdown Accordion / Submenu -->
+        <div class="mobile-nav-dropdown">
+          <button class="mobile-nav-link active w-100 justify-content-between border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHomeSubmenu" aria-expanded="false" aria-controls="mobileHomeSubmenu">
+            <span class="d-flex align-items-center gap-2">
+              <i data-lucide="home" style="width:20px;"></i> Home
+            </span>
+            <i data-lucide="chevron-down" style="width:16px;"></i>
+          </button>
+          <div class="collapse show ps-3 mt-1" id="mobileHomeSubmenu">
+            <a href="#home" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+              <i data-lucide="shield-check" class="text-teal" style="width:16px;"></i> Home 1 (Healthcare Shield)
+            </a>
+            <a href="#home2" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+              <i data-lucide="zap" class="text-warning" style="width:16px;"></i> Home 2 (Emergency Defense)
+            </a>
+          </div>
+        </div>
 
-        <a href="#contact" class="mobile-nav-link justify-content-center"><i data-lucide="phone-call"
-            style="width:20px;"></i> Contact</a>
+        <a href="#about" class="mobile-nav-link justify-content-start"><i data-lucide="award" style="width:20px;"></i> About</a>
+        <a href="#treatments" class="mobile-nav-link justify-content-start"><i data-lucide="bug" style="width:20px;"></i> Treatments</a>
+        <a href="#packages" class="mobile-nav-link justify-content-start"><i data-lucide="box" style="width:20px;"></i> Packages</a>
+        <a href="#safety" class="mobile-nav-link justify-content-start"><i data-lucide="heart-handshake" style="width:20px;"></i> Safety</a>
+        <a href="#pricing" class="mobile-nav-link justify-content-start"><i data-lucide="dollar-sign" style="width:20px;"></i> Pricing</a>
+        <a href="#contact" class="mobile-nav-link justify-content-start"><i data-lucide="phone-call" style="width:20px;"></i> Contact</a>
       </div>
 
       <div class="mobile-nav-footer pt-4 border-top border-secondary border-opacity-25 text-center">
@@ -625,10 +642,10 @@
                 </div>
               </div>
               <div class="col-lg-6 text-center text-lg-start ps-lg-4">
-                <span class="treatment-badge bg-teal text-white mb-2 d-inline-block px-3 py-1 rounded-pill" style="background:var(--primary);">Specialized & Emergency</span>
+                <span class="badge bg-teal text-white mb-3 d-inline-flex align-items-center px-3 py-2 rounded-pill" style="background:var(--primary); font-size:0.8rem;">Specialized & Emergency</span>
                 <h3 class="h4 font-heading text-dark mb-2">High-Capacity Whole-Facility Fumigation</h3>
                 <p class="text-muted small mb-3">Enterprise-grade deep thermal aerosol gas diffusion for severe infestations, food processing plants, warehouses, and multi-unit residential complexes.</p>
-                <div class="d-flex align-items-center justify-content-between pt-3 border-top">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
                   <span class="fw-bold text-teal fs-5">Custom Facility Assessment</span>
                   <a href="#book-inspection" class="btn btn-shield-primary">Request Live Assessment</a>
                 </div>
@@ -1061,7 +1078,7 @@
 
       <div class="row g-4 justify-content-center">
         <!-- Basic Plan -->
-        <div class="col-md-6 col-lg-3 gsap-stagger-item">
+        <div class="col-md-6 col-lg-6 gsap-stagger-item">
           <div class="package-card d-flex flex-column justify-content-between">
             <div class="text-center text-lg-start">
               <h3 class="h4 font-heading text-dark mb-1">Basic Shield</h3>
@@ -1086,7 +1103,7 @@
         </div>
 
         <!-- Standard Plan (Popular) -->
-        <div class="col-md-6 col-lg-3 gsap-stagger-item">
+        <div class="col-md-6 col-lg-6 gsap-stagger-item">
           <div class="package-card popular d-flex flex-column justify-content-between">
             <span class="popular-tag">Most Popular</span>
             <div class="text-center text-lg-start">
@@ -1112,7 +1129,7 @@
         </div>
 
         <!-- Premium Fortress -->
-        <div class="col-md-6 col-lg-3 gsap-stagger-item">
+        <div class="col-md-6 col-lg-6 gsap-stagger-item">
           <div class="package-card d-flex flex-column justify-content-between">
             <div class="text-center text-lg-start">
               <h3 class="h4 font-heading text-dark mb-1">Premium Fortress</h3>
@@ -1137,7 +1154,7 @@
         </div>
 
         <!-- Commercial Pro -->
-        <div class="col-md-6 col-lg-3 gsap-stagger-item">
+        <div class="col-md-6 col-lg-6 gsap-stagger-item">
           <div class="package-card d-flex flex-column justify-content-between">
             <div class="text-center text-lg-start">
               <h3 class="h4 font-heading text-dark mb-1">Commercial Pro</h3>
@@ -1820,11 +1837,23 @@
         </div>
 
         <div class="col-lg-7">
-          <div class="rounded-4 overflow-hidden shadow-sm border border-secondary border-opacity-25"
+          <div class="rounded-4 overflow-hidden shadow-sm border border-secondary border-opacity-25 position-relative"
             style="height:350px;">
             <iframe title="SafeShield Office Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537363153166!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <!-- Map Overlay Location Info Card -->
+            <div class="position-absolute top-0 start-0 m-3 p-3 glass-card rounded-4 shadow-lg border border-white d-flex align-items-center gap-3" style="background:rgba(255,255,255,0.95); z-index:10; max-width:320px;">
+              <div class="brand-icon rounded-circle flex-shrink-0" style="width:42px; height:42px;">
+                <i data-lucide="map-pin" style="width:20px;"></i>
+              </div>
+              <div class="text-start">
+                <div class="fw-bold text-dark small">SafeShield HQ</div>
+                <div class="text-muted" style="font-size:0.75rem;">450 Health & Tech Parkway, Suite 800</div>
+                <a href="https://maps.google.com" target="_blank" rel="noopener" class="small text-teal fw-semibold text-decoration-none">Open Directions <i data-lucide="external-link" style="width:12px;"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1921,17 +1950,17 @@
                 <!-- Live Price Estimate Banner -->
                 <div class="col-12 mt-4">
                   <div
-                    class="glass-card p-3 d-flex flex-column flex-sm-row align-items-center justify-content-between text-center text-sm-start">
+                    class="glass-card p-3 p-sm-4 d-flex align-items-center justify-content-between text-start gap-3">
                     <div>
                       <div class="fw-bold text-dark">Estimated Service Investment</div>
                       <div class="text-muted small">Includes initial thermal inspection & warranty certificate</div>
                     </div>
-                    <div class="display-6 font-heading fw-bold text-teal mt-2 mt-sm-0" id="liveEstimatePrice">$149</div>
+                    <div class="font-heading fw-bold text-teal flex-shrink-0" id="liveEstimatePrice" style="font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1; margin: 0;">$149</div>
                   </div>
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                  <button type="submit" class="btn btn-shield-primary btn-lg px-5">
+                  <button type="submit" class="btn btn-shield-primary btn-lg w-100">
                     <i data-lucide="check-circle" style="width:20px;"></i> Confirm Inspection Request
                   </button>
                 </div>
