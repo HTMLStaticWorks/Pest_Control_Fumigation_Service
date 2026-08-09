@@ -636,22 +636,44 @@ a {
 
 /* Stats Section */
 .stats-box {
-  padding: 2.25rem 1.25rem;
+  padding: 2rem 1rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: var(--radius-md);
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow-sm);
   text-align: center;
   overflow: hidden;
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
 }
 .stat-number {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  font-size: clamp(1.4rem, 4.5vw, 3rem);
   font-weight: 700;
   color: var(--primary);
   line-height: 1.1;
   margin-bottom: 0.5rem;
-  word-break: break-word;
+  white-space: nowrap !important;
+}
+.stats-box .text-muted {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="dark"] .stats-box {
+  background: #1C2541 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .stats-box .text-muted {
+  color: #CBD5E1 !important;
 }
 
 /* Testimonial Swiper Cards (Equal Heights & Non-overlapping Pagination) */
@@ -1409,6 +1431,406 @@ footer .input-group .btn {
   background: rgba(20, 184, 166, 0.25) !important;
   border-color: var(--secondary) !important;
   color: var(--secondary) !important;
+}
+
+/* ==========================================================================
+   UI BUG FIXES & ENHANCEMENTS (RESPONSIVE, ALIGNMENTS, CONTRAST, RTL)
+   ========================================================================== */
+
+/* 1. Navbar Active Link Visibility & Dropdown Highlighting */
+.nav-link-custom.active {
+  color: #FFFFFF !important;
+  background: var(--primary) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(15, 118, 110, 0.4) !important;
+}
+.dropdown-menu-custom .dropdown-item.active,
+.dropdown-menu-custom .dropdown-item:active {
+  background-color: rgba(15, 118, 110, 0.15) !important;
+  color: var(--primary) !important;
+  font-weight: 700 !important;
+}
+
+/* 2. Home Page 1 Hero Floating Cards Equal Size on Mobile */
+@media (max-width: 768px) {
+  .hero-floating-card {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 12px auto !important;
+    width: 280px !important;
+    min-width: 280px !important;
+    max-width: 280px !important;
+    min-height: 72px !important;
+    box-sizing: border-box !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* 3. Home Page 1 & Diagnostic Report Buttons on Mobile/Tablet */
+@media (max-width: 991px) {
+  .hero-cta-wrap .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* 4. Home Page 2 Image & Video Banner Alignment on Mobile */
+@media (max-width: 991px) {
+  .hero-home2-redesign .video-glow-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-home2-redesign .hero-floating-card {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    bottom: auto !important;
+    margin: 15px auto 0 auto !important;
+    width: 280px !important;
+    justify-content: center !important;
+  }
+}
+
+/* 5. Home Page 2 Card Text Contrast & Equal Button Sizes on Mobile */
+.hero-cta-wrap {
+  display: flex;
+  gap: 12px;
+}
+.hero-cta-wrap .btn {
+  font-size: 0.95rem !important;
+  padding: 14px 20px !important;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .hero-cta-wrap .btn {
+    flex: 1 1 0px !important;
+    min-width: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero-cta-wrap {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .hero-cta-wrap .btn {
+    width: 100% !important;
+    min-height: 52px;
+  }
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+}
+.glass-dark .text-white {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+}
+.glass-dark .small {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 6. Treatment Page Button Alignment across Cards (Mobile, Tab & Desktop) */
+.treatment-item {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.treatment-card {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.treatment-card > div:last-child {
+  display: flex !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+  justify-content: space-between !important;
+}
+
+.treatment-card .border-top {
+  margin-top: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.treatment-card .btn-shield-outline {
+  width: auto !important;
+  margin-bottom: 0 !important;
+  font-size: 0.85rem !important;
+  padding: 8px 18px !important;
+  min-height: auto !important;
+  white-space: nowrap !important;
+}
+
+/* 7. Safety Page Hover Card Layout Alignment & Equal Heights */
+.safety-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 2.25rem 1.75rem;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  will-change: transform;
+  box-sizing: border-box !important;
+}
+.safety-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: var(--primary) !important;
+}
+.safety-card h4 {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="dark"] .safety-card {
+  background: #1C2541 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .safety-card h4 {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .safety-card p {
+  color: #CBD5E1 !important;
+}
+[data-theme="dark"] .safety-icon {
+  background: rgba(20, 184, 166, 0.18) !important;
+  color: #2DD4BF !important;
+}
+
+/* 8. Contact Page Icon Alignment on Mobile & Tablet */
+@media (max-width: 991px) {
+  #contact .d-flex.align-items-center.justify-content-start {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+}
+
+/* 10. Footer Newsletter Input Alignment & Floating Scroll-To-Top Button */
+.footer-newsletter-box {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.footer-newsletter-box .form-control {
+  background: transparent !important;
+  border: none !important;
+  color: #FFFFFF !important;
+  padding: 10px 18px !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: var(--radius-pill) !important;
+}
+.footer-newsletter-box .btn {
+  border-radius: var(--radius-pill) !important;
+  padding: 10px 24px !important;
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .footer-newsletter-box {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+    gap: 10px;
+  }
+  .footer-newsletter-box .form-control {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    width: 100%;
+  }
+  .footer-newsletter-box .btn {
+    width: 100%;
+  }
+}
+
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fab-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+  color: #FFFFFF !important;
+  text-decoration: none;
+}
+
+.fab-whatsapp {
+  background: #25D366;
+}
+.fab-whatsapp:hover {
+  background: #1EBE5D;
+  transform: scale(1.1);
+}
+
+.fab-scroll-top {
+  background: var(--primary);
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+.fab-scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.fab-scroll-top:hover {
+  background: var(--primary-hover);
+  transform: translateY(-3px);
+}
+
+/* 11. Testimonials / Verified Review Section Contrast in Dark Mode & RTL Card Alignment */
+[data-theme="dark"] .testimonial-card {
+  background: #1C2541 !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .testimonial-card .text-muted {
+  color: #CBD5E1 !important;
+}
+[data-theme="dark"] .testimonial-card .text-dark {
+  color: #FFFFFF !important;
+}
+
+html[dir="rtl"] .swiper-testimonials {
+  direction: rtl;
+}
+html[dir="rtl"] .testimonial-card {
+  text-align: right;
+}
+
+/* 12. Map Location Overlay Card Alignment */
+.map-overlay-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  z-index: 10;
+  max-width: 320px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+[data-theme="dark"] .map-overlay-card {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .map-overlay-card .text-dark {
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .map-overlay-card .text-muted {
+  color: #CBD5E1 !important;
+}
+
+@media (max-width: 576px) {
+  .map-overlay-card {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 12px auto !important;
+    width: calc(100% - 24px) !important;
+    max-width: 100% !important;
+  }
+}
+
+/* 13. Comprehensive RTL Mode Alignment (Navbar, Dropdowns, Footer, Offcanvas) */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] body {
+  text-align: right;
+}
+html[dir="rtl"] .navbar-menu,
+html[dir="rtl"] .desktop-nav-menu {
+  direction: rtl;
+}
+html[dir="rtl"] .dropdown-menu,
+html[dir="rtl"] .dropdown-menu-custom {
+  text-align: right !important;
+  left: auto !important;
+  right: 0 !important;
+}
+html[dir="rtl"] footer,
+html[dir="rtl"] footer .row,
+html[dir="rtl"] footer .col-6,
+html[dir="rtl"] footer .col-lg-2,
+html[dir="rtl"] footer .col-lg-4,
+html[dir="rtl"] footer h5,
+html[dir="rtl"] footer h6 {
+  text-align: right !important;
+}
+html[dir="rtl"] footer ul {
+  padding-right: 0 !important;
+  text-align: right !important;
+}
+html[dir="rtl"] footer ul li {
+  text-align: right !important;
+}
+html[dir="rtl"] footer .brand-logo,
+html[dir="rtl"] footer .d-flex {
+  justify-content: flex-start !important;
+}
+html[dir="rtl"] .mobile-nav-list,
+html[dir="rtl"] .mobile-nav-link,
+html[dir="rtl"] .offcanvas-body {
+  text-align: right !important;
+  direction: rtl;
+}
+html[dir="rtl"] .floating-actions {
+  right: auto !important;
+  left: 24px !important;
+}
+html[dir="rtl"] .map-overlay-card {
+  left: auto !important;
+  right: 15px !important;
+  text-align: right !important;
 }
 
 

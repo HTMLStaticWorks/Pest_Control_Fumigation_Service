@@ -111,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // THEME & RTL TOGGLES
   initThemeAndRTL();
+
+  // BACK TO TOP SCROLL BUTTON
+  initScrollToTop();
 });
 
 /* ==========================================================================
@@ -452,7 +455,7 @@ function initRiskCalculator() {
 /* Dynamic ScrollSpy for Navbar Links */
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.desktop-nav-menu .nav-link-custom, .mobile-nav-list .mobile-nav-link, .mobile-nav-sublink');
+  const navLinks = document.querySelectorAll('.desktop-nav-menu .nav-link-custom, .mobile-nav-list .mobile-nav-link, .mobile-nav-sublink, .dropdown-menu-custom .dropdown-item');
   const homeDropdown = document.getElementById('homeDropdown');
 
   if (!sections.length || !navLinks.length) return;
@@ -497,6 +500,27 @@ function initScrollSpy() {
 
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
+}
+
+/* Scroll To Top Floating Button Handler */
+function initScrollToTop() {
+  const scrollBtn = document.getElementById('scrollTopBtn');
+  if (!scrollBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add('visible');
+    } else {
+      scrollBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
 }
 
 
