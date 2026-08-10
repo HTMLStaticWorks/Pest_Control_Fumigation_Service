@@ -1274,15 +1274,68 @@ footer .input-group .btn {
   text-align: right !important;
 }
 
+/* Verified Reviews Section RTL Card Alignment Fix */
+html[dir="rtl"] .swiper-testimonials {
+  direction: ltr !important;
+}
+html[dir="rtl"] .swiper-slide {
+  direction: rtl !important;
+}
+html[dir="rtl"] .testimonial-card {
+  text-align: right !important;
+  direction: rtl !important;
+}
+html[dir="rtl"] .testimonial-card .d-flex {
+  justify-content: flex-start !important;
+  text-align: right !important;
+}
+html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
+  flex-direction: row !important;
+}
 
-/* Responsive Navbar Rules for <= 1024px Breakpoint (Tablet & Mobile) */
+/* Responsive Navbar & Hero Layout Rules for <= 1024px Breakpoint (Tablet & Mobile) */
 @media (max-width: 1024px) {
   #desktopNavbar,
-  .desktop-nav-menu {
+  .desktop-nav-menu,
+  .navbar-expand-lg .navbar-collapse {
     display: none !important;
   }
   .mobile-nav-controls {
     display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Hero Section: Image/Video placed below headline text on <= 1024px */
+  .hero-section .row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .hero-section .col-lg-7,
+  .hero-section .col-lg-6,
+  .hero-section .col-lg-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  .hero-section .hero-content {
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
+  }
+  .hero-section .hero-title {
+    font-size: clamp(2.2rem, 5vw, 3.25rem) !important;
+  }
+  .hero-section .hero-subtitle {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .hero-section .hero-cta-wrap {
+    justify-content: center !important;
+  }
+  .hero-section .hero-image-wrapper,
+  .hero-section .video-glow-wrapper {
+    width: 100% !important;
+    max-width: 560px !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -1437,8 +1490,9 @@ footer .input-group .btn {
    UI BUG FIXES & ENHANCEMENTS (RESPONSIVE, ALIGNMENTS, CONTRAST, RTL)
    ========================================================================== */
 
-/* 1. Navbar Active Link Visibility & Dropdown Highlighting */
-.nav-link-custom.active {
+/* 1. Navbar Active Link Visibility & Dropdown Highlighting across All Sections */
+.nav-link-custom.active,
+#homeDropdown.active {
   color: #FFFFFF !important;
   background: var(--primary) !important;
   font-weight: 700 !important;
@@ -1449,6 +1503,42 @@ footer .input-group .btn {
   background-color: rgba(15, 118, 110, 0.15) !important;
   color: var(--primary) !important;
   font-weight: 700 !important;
+}
+.mobile-nav-link.active {
+  color: var(--accent) !important;
+  background: rgba(132, 204, 22, 0.15) !important;
+  font-weight: 700 !important;
+  padding-left: 24px !important;
+  border-left: 4px solid var(--accent) !important;
+}
+.mobile-nav-sublink.active {
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+.mobile-nav-sublink.active i {
+  color: var(--accent) !important;
+}
+
+/* Mobile Toggler & Offcanvas Drawer Overlap Fix */
+.mobile-nav-controls .navbar-toggler {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.offcanvas-custom {
+  z-index: 1060 !important;
+}
+
+.offcanvas-custom .offcanvas-body {
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
 }
 
 /* 2. Home Page 1 Hero Floating Cards Equal Size on Mobile */
@@ -1477,15 +1567,21 @@ footer .input-group .btn {
   }
 }
 
-/* 4. Home Page 2 Image & Video Banner Alignment on Mobile */
+/* 4. Home Page 2 Image & Video Banner Alignment on Mobile & Tablet */
 @media (max-width: 991px) {
   .hero-home2-redesign .video-glow-wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    border-radius: var(--radius-md) !important;
+    overflow: hidden !important;
+  }
+  .hero-home2-redesign .video-glow-wrapper video {
+    width: 100% !important;
+    max-height: 380px !important;
+    object-fit: cover !important;
+    display: block !important;
   }
   .hero-home2-redesign .hero-floating-card {
     position: relative !important;
@@ -1493,28 +1589,35 @@ footer .input-group .btn {
     right: auto !important;
     left: auto !important;
     bottom: auto !important;
-    margin: 15px auto 0 auto !important;
-    width: 280px !important;
+    margin: 16px auto 0 auto !important;
+    width: calc(100% - 32px) !important;
+    max-width: 340px !important;
     justify-content: center !important;
+    text-align: left !important;
   }
 }
 
-/* 5. Home Page 2 Card Text Contrast & Equal Button Sizes on Mobile */
+/* 5. Home Page 2 Card Text Contrast & Button Alignment & Visibility */
 .hero-cta-wrap {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .hero-cta-wrap .btn {
   font-size: 0.95rem !important;
-  padding: 14px 20px !important;
-  white-space: nowrap;
-  align-items: center;
-  justify-content: center;
+  padding: 14px 24px !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
 }
 @media (min-width: 768px) {
   .hero-cta-wrap .btn {
-    flex: 1 1 0px !important;
-    min-width: 0 !important;
+    flex: 0 1 auto !important;
+    min-width: fit-content !important;
   }
 }
 @media (max-width: 767px) {
@@ -1528,20 +1631,147 @@ footer .input-group .btn {
   }
 }
 
-.glass-dark {
-  background: rgba(15, 23, 42, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+/* Home Page 2 Card Text Contrast in Light & Dark Mode */
+.hero-home2-redesign .glass-dark,
+.hero-home2-redesign .hero-floating-card {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
   color: #FFFFFF !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
 }
-.glass-dark .text-white {
+.hero-home2-redesign .glass-dark *,
+.hero-home2-redesign .hero-floating-card * {
+  color: #FFFFFF;
+}
+.hero-home2-redesign .glass-dark .text-white,
+.hero-home2-redesign .hero-floating-card .text-white,
+.hero-home2-redesign .glass-dark .fw-bold,
+.hero-home2-redesign .hero-floating-card .fw-bold,
+.hero-home2-redesign .glass-dark .fw-medium {
   color: #FFFFFF !important;
   opacity: 1 !important;
 }
-.glass-dark .small {
-  color: rgba(255, 255, 255, 0.9) !important;
+.hero-home2-redesign .glass-dark .text-teal,
+.hero-home2-redesign .hero-floating-card .text-teal {
+  color: #2DD4BF !important;
+  opacity: 1 !important;
+}
+.hero-home2-redesign .glass-dark .text-accent,
+.hero-home2-redesign .hero-floating-card .text-accent {
+  color: #A3E635 !important;
+  opacity: 1 !important;
+}
+.hero-home2-redesign .glass-dark .text-warning,
+.hero-home2-redesign .hero-floating-card .text-warning {
+  color: #FBBF24 !important;
+  opacity: 1 !important;
+}
+.hero-home2-redesign .glass-dark .small,
+.hero-home2-redesign .hero-floating-card .small {
+  color: #E2E8F0 !important;
+  opacity: 1 !important;
 }
 
-/* 6. Treatment Page Button Alignment across Cards (Mobile, Tab & Desktop) */
+.btn-shield-accent {
+  background: linear-gradient(135deg, #84CC16 0%, #65A30D 100%) !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+.btn-shield-accent:hover,
+.btn-shield-accent:focus,
+.btn-shield-accent:active {
+  color: #000000 !important;
+  background: linear-gradient(135deg, #A3E635 0%, #84CC16 100%) !important;
+}
+.btn-shield-primary {
+  background: linear-gradient(135deg, #0F766E 0%, #0D655E 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+.btn-shield-primary:hover,
+.btn-shield-primary:focus,
+.btn-shield-primary:active {
+  color: #FFFFFF !important;
+}
+
+/* 6. Step-by-Step Our Process Section - Card & Image Alignment Fix (Mobile, Tab & Desktop) */
+.process-step-card {
+  background: var(--card-bg, #FFFFFF);
+  border-radius: var(--radius-lg, 20px) !important;
+  border: 1px solid var(--card-border, rgba(226, 232, 240, 0.8)) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--transition-smooth) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  padding: 12px !important;
+}
+
+[data-theme="dark"] .process-step-card {
+  background: #131C35 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.process-step-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: var(--shadow-lg) !important;
+  border-color: rgba(20, 184, 166, 0.4) !important;
+}
+
+.process-step-img-wrap {
+  position: relative !important;
+  width: 100% !important;
+  height: 220px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  background: #0F172A !important;
+}
+
+.process-step-img-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.process-step-card:hover .process-step-img-wrap img {
+  transform: scale(1.06) !important;
+}
+
+.step-num-badge {
+  width: 38px !important;
+  height: 38px !important;
+  border: 2px solid #FFFFFF !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+@media (max-width: 991px) {
+  .process-step-card {
+    padding: 10px !important;
+  }
+  .process-step-img-wrap {
+    height: 190px !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-step-card {
+    padding: 10px !important;
+  }
+  .process-step-img-wrap {
+    height: 180px !important;
+    border-radius: 10px !important;
+  }
+}
+
+/* 7. Treatment Page Button Alignment across Cards (Mobile, Tab & Desktop) */
 .treatment-item {
   display: flex !important;
   flex-direction: column !important;
@@ -1741,23 +1971,23 @@ html[dir="rtl"] .testimonial-card {
   text-align: right;
 }
 
-/* 12. Map Location Overlay Card Alignment */
+/* 12. Map Location Overlay Card Alignment & Overlap Prevention */
 .map-overlay-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  border-radius: var(--radius-md);
-  padding: 14px 18px;
-  z-index: 10;
-  max-width: 320px;
+  background: #FFFFFF !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 14px 18px !important;
+  z-index: 20 !important;
+  max-width: 320px !important;
   display: flex !important;
   align-items: center !important;
   gap: 14px !important;
 }
 
 [data-theme="dark"] .map-overlay-card {
-  background: rgba(15, 23, 42, 0.95) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: rgba(15, 23, 42, 0.98) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: #FFFFFF !important;
 }
 [data-theme="dark"] .map-overlay-card .text-dark {
@@ -1773,6 +2003,7 @@ html[dir="rtl"] .testimonial-card {
     top: auto !important;
     left: auto !important;
     right: auto !important;
+    bottom: auto !important;
     margin: 12px auto !important;
     width: calc(100% - 24px) !important;
     max-width: 100% !important;

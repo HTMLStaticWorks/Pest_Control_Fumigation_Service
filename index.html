@@ -106,11 +106,11 @@
 
       <!-- Mobile & Tablet Controls (Shown on screens <= 1024px) -->
       <div class="align-items-center gap-2 mobile-nav-controls">
-        <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation">
-          <div class="p-2 glass-card rounded-circle d-flex align-items-center justify-content-center"
-            style="width:44px; height:44px;">
-            <i data-lucide="menu" style="width:24px; height:24px; color:var(--dark);"></i>
+          <div class="glass-card rounded-circle d-flex align-items-center justify-content-center"
+            style="width:44px; height:44px; background: rgba(255, 255, 255, 0.95); border: 1.5px solid rgba(20, 184, 166, 0.4);">
+            <i data-lucide="menu" style="width:22px; height:22px; color:var(--dark);"></i>
           </div>
         </button>
       </div>
@@ -132,18 +132,16 @@
     <div class="offcanvas-body p-4 d-flex flex-column justify-content-between">
       <!-- Quick Theme & RTL Toggles inside Hamburger Drawer -->
       <div class="d-flex align-items-center justify-content-center gap-3 p-2 mb-3 rounded-pill border border-secondary border-opacity-25 bg-white bg-opacity-10">
-        <button id="themeToggleBtnMobile" class="btn btn-sm text-white rounded-pill px-3 d-flex align-items-center gap-2" style="background:rgba(255,255,255,0.15);" title="Toggle Dark/Light Theme">
-          <i data-lucide="moon" id="themeIconMobile" style="width:16px; height:16px;"></i>
-          <span class="small fw-semibold">Theme</span>
+        <button id="themeToggleBtnMobile" class="btn-nav-action" title="Toggle Light / Dark Theme" aria-label="Toggle Theme">
+          <i data-lucide="moon" id="themeIconMobile" style="width:18px; height:18px;"></i>
         </button>
-        <button id="rtlToggleBtnMobile" class="btn btn-sm text-white rounded-pill px-3 d-flex align-items-center gap-2" style="background:rgba(255,255,255,0.15);" title="Toggle LTR/RTL Layout">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIconMobile">
+        <button id="rtlToggleBtnMobile" class="btn-nav-action" title="Toggle LTR / RTL Mode" aria-label="Toggle RTL">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIconMobile">
             <path d="M20 7H4"></path>
             <path d="m9 3-5 4 5 4"></path>
             <path d="M4 17h16"></path>
             <path d="m15 13 5 4-5 4"></path>
           </svg>
-          <span class="small fw-semibold" id="rtlLabelMobile">RTL</span>
         </button>
       </div>
 
@@ -151,53 +149,34 @@
         <!-- Home Dropdown Accordion / Submenu -->
         <div class="mobile-nav-dropdown">
           <button class="mobile-nav-link active w-100 justify-content-between border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHomeSubmenu" aria-expanded="false" aria-controls="mobileHomeSubmenu">
-            <span class="d-flex align-items-center gap-2">
-              <i data-lucide="home" style="width:20px;"></i> Home
-            </span>
+            <span>Home</span>
             <i data-lucide="chevron-down" style="width:16px;"></i>
           </button>
           <div class="collapse show ps-3 mt-1" id="mobileHomeSubmenu">
             <a href="#home" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
-              <i data-lucide="shield-check" class="text-teal" style="width:16px;"></i> Home 1 (Healthcare Shield)
+              Home 1 (Healthcare Shield)
             </a>
             <a href="#home2" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
-              <i data-lucide="zap" class="text-warning" style="width:16px;"></i> Home 2 (Emergency Defense)
+              Home 2 (Emergency Defense)
             </a>
           </div>
         </div>
 
-        <a href="#about" class="mobile-nav-link justify-content-start"><i data-lucide="award" style="width:20px;"></i> About</a>
-        <a href="#treatments" class="mobile-nav-link justify-content-start"><i data-lucide="bug" style="width:20px;"></i> Treatments</a>
-        <a href="#packages" class="mobile-nav-link justify-content-start"><i data-lucide="box" style="width:20px;"></i> Packages</a>
-        <a href="#safety" class="mobile-nav-link justify-content-start"><i data-lucide="heart-handshake" style="width:20px;"></i> Safety</a>
-        <a href="#pricing" class="mobile-nav-link justify-content-start"><i data-lucide="dollar-sign" style="width:20px;"></i> Pricing</a>
-        <a href="#contact" class="mobile-nav-link justify-content-start"><i data-lucide="phone-call" style="width:20px;"></i> Contact</a>
+        <a href="#about" class="mobile-nav-link justify-content-start">About</a>
+        <a href="#treatments" class="mobile-nav-link justify-content-start">Treatments</a>
+        <a href="#packages" class="mobile-nav-link justify-content-start">Packages</a>
+        <a href="#safety" class="mobile-nav-link justify-content-start">Safety</a>
+        <a href="#pricing" class="mobile-nav-link justify-content-start">Pricing</a>
+        <a href="#contact" class="mobile-nav-link justify-content-start">Contact</a>
       </div>
 
       <div class="mobile-nav-footer pt-4 border-top border-secondary border-opacity-25 text-center">
-        <a href="#book-inspection" class="btn btn-shield-accent w-100 mb-3" data-bs-dismiss="offcanvas">
-          <i data-lucide="calendar-check" style="width:18px;"></i> Book Inspection
+        <a href="#book-inspection" class="btn btn-shield-primary w-100 mb-3" data-bs-dismiss="offcanvas">
+          <i data-lucide="calendar-check" style="width:18px;"></i> Book
         </a>
-        <a href="tel:18005557443" class="text-teal text-decoration-none font-heading fw-bold d-block mb-3">
+        <a href="tel:18005557443" class="text-teal text-decoration-none font-heading fw-bold d-block mb-1">
           <i data-lucide="phone-incoming" style="width:16px;" class="me-1"></i> 24/7 Hotline: 1-800-555-SHIELD
         </a>
-        <div class="d-flex justify-content-center gap-2 pt-2 border-top border-secondary border-opacity-25">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Facebook" title="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Instagram" title="Instagram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Twitter / X" title="Twitter / X">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="LinkedIn" title="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="YouTube" title="YouTube">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -921,17 +900,17 @@
       <div class="row g-4 gsap-stagger-container">
         <!-- Step 1 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/wqw.jpg" alt="Thermal & Digital Inspection" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/wqw.jpg" alt="Thermal & Digital Inspection" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
                 Phase 01
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 1
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="scan" class="text-teal me-2" style="width:20px;"></i>Thermal & Digital Inspection</h4>
                 <p class="text-muted small mb-3">Certified technicians inspect walls, attics, moisture points, and hidden voids using infrared thermal scanners.</p>
@@ -945,17 +924,17 @@
 
         <!-- Step 2 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/df.jpg" alt="Pest Identification & Risk Analysis" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/df.jpg" alt="Pest Identification & Risk Analysis" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
                 Phase 02
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 2
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="microscope" class="text-teal me-2" style="width:20px;"></i>Pest ID & Risk Analysis</h4>
                 <p class="text-muted small mb-3">We pinpoint the exact pest species, nest origins, entry avenues, and environmental breeding triggers.</p>
@@ -969,17 +948,17 @@
 
         <!-- Step 3 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/xcv.jpg" alt="Targeted Eco-Chemical Treatment" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/xcv.jpg" alt="Targeted Eco-Chemical Treatment" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
                 Phase 03
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 3
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="sparkles" class="text-teal me-2" style="width:20px;"></i>Targeted Eco Treatment</h4>
                 <p class="text-muted small mb-3">Application of odorless, botanical micro-encapsulated formulations, gel baits, and growth regulators.</p>
@@ -993,17 +972,17 @@
 
         <!-- Step 4 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/mzmzm.jpg" alt="Perimeter Exclusion & Barrier Sealing" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/mzmzm.jpg" alt="Perimeter Exclusion & Barrier Sealing" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
                 Phase 04
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 4
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="shield-check" class="text-teal me-2" style="width:20px;"></i>Perimeter Exclusion Sealing</h4>
                 <p class="text-muted small mb-3">Sealing structural gaps, pipe penetrations, and installing protective barrier shields to stop re-entry.</p>
@@ -1017,17 +996,17 @@
 
         <!-- Step 5 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/cccc.jpg" alt="Post-Treatment Air Quality Audit" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/cccc.jpg" alt="Post-Treatment Air Quality Audit" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
                 Phase 05
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 5
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="activity" class="text-teal me-2" style="width:20px;"></i>Air Quality & Monitor Audit</h4>
                 <p class="text-muted small mb-3">Deployment of digital monitor traps and verification that indoor air quality remains 100% safe.</p>
@@ -1041,17 +1020,17 @@
 
         <!-- Step 6 -->
         <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card p-0 overflow-hidden h-100 d-flex flex-column justify-content-between">
-            <div class="position-relative" style="height:200px; overflow:hidden;">
-              <img src="image/scj.jpg" alt="Official Shield Warranty Certificate" class="w-100 h-100" style="object-fit:cover;">
+          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
+            <div class="process-step-img-wrap">
+              <img src="image/scj.jpg" alt="Official Shield Warranty Certificate" loading="lazy" decoding="async">
               <div class="position-absolute top-0 start-0 m-3 badge bg-warning text-dark font-heading fw-bold px-3 py-2 rounded-pill fs-7">
                 Phase 06
               </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center" style="width:40px; height:40px; border:2px solid #fff;">
+              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
                 6
               </div>
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1 justify-content-between">
+            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
               <div>
                 <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="award" class="text-warning me-2" style="width:20px;"></i>Shield Warranty Certificate</h4>
                 <p class="text-muted small mb-3">Issuance of official warranty certificate backed by free re-treatment guarantees if pests reappear.</p>
@@ -1838,13 +1817,13 @@
 
         <div class="col-lg-7">
           <div class="rounded-4 overflow-hidden shadow-sm border border-secondary border-opacity-25 position-relative"
-            style="height:350px;">
+            style="height:360px;">
             <iframe title="SafeShield Office Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537363153166!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537363153166!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAxLjkiUyAxNDTCsDU3JzEzLjUiRQ!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             
             <!-- Map Overlay Location Info Card -->
-            <div class="position-absolute top-0 start-0 m-3 p-3 glass-card rounded-4 shadow-lg border border-white d-flex align-items-center gap-3 map-overlay-card">
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 glass-card rounded-4 shadow-lg border border-white d-flex align-items-center gap-3 map-overlay-card">
               <div class="brand-icon rounded-circle flex-shrink-0" style="width:42px; height:42px;">
                 <i data-lucide="map-pin" style="width:20px;"></i>
               </div>
