@@ -1345,7 +1345,9 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
     display: flex !important;
   }
   .mobile-nav-controls {
-    display: none !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: 0.75rem;
   }
 }
 
@@ -1520,13 +1522,47 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
   color: var(--accent) !important;
 }
 
-/* Mobile Toggler & Offcanvas Drawer Overlap Fix */
-.mobile-nav-controls .navbar-toggler {
+/* Hamburger Navbar Toggler & Offcanvas Drawer Overlap Fix */
+.mobile-nav-controls {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.mobile-nav-controls .navbar-toggler,
+.navbar-safeshield .navbar-toggler {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   padding: 0 !important;
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
   outline: none !important;
+}
+
+.nav-hamburger-icon {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--dark);
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+.nav-hamburger-icon:hover {
+  background: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.3);
+}
+[data-theme="dark"] .nav-hamburger-icon {
+  background: rgba(28, 37, 65, 0.95) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(20, 184, 166, 0.5) !important;
+}
+[data-theme="dark"] .nav-hamburger-icon:hover {
+  background: var(--secondary) !important;
+  color: #0F172A !important;
+  border-color: var(--secondary) !important;
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.4);
 }
 
 .offcanvas-custom {
