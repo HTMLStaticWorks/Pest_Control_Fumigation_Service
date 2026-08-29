@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Safety & Eco Standards | SafeShield Pest Control</title>
+  <meta name="description"
+    content="Learn about SafeShield's WHO and EPA approved eco-friendly pest control formulations. 100% odorless, pediatric safe, pet friendly, with zero airborne toxins.">
+  <meta name="keywords"
+    content="pet safe pest control, odorless fumigation, who approved pesticide, eco friendly termite treatment, epa certified pest control">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-safeshield">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="index.html">
+        <div class="brand-icon">
+          <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
+        </div>
+        <span class="brand-text">Safe<span class="text-teal">Shield</span></span>
+      </a>
+
+      <div class="collapse navbar-collapse desktop-nav-menu" id="desktopNavbar">
+        <ul class="navbar-menu nav mx-auto align-items-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="homeDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i data-lucide="chevron-down" class="ms-1" style="width:14px; height:14px;"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-custom shadow-lg border-0" aria-labelledby="homeDropdown">
+              <li><a class="dropdown-item py-2 fw-semibold" href="index.html">Home 1 (Healthcare Shield)</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="home-2.html">Home 2 (Emergency Defense)</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="safety.html">Safety</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="d-flex align-items-center ms-lg-3 gap-2">
+          <button id="themeToggleBtn" class="btn-nav-action" title="Toggle Light / Dark Theme"
+            aria-label="Toggle Theme">
+            <i data-lucide="moon" id="themeIcon" style="width:18px; height:18px;"></i>
+          </button>
+          <button id="rtlToggleBtn" class="btn-nav-action" title="Toggle LTR / RTL Mode" aria-label="Toggle RTL">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIcon">
+              <path d="M20 7H4"></path>
+              <path d="m9 3-5 4 5 4"></path>
+              <path d="M4 17h16"></path>
+              <path d="m15 13 5 4-5 4"></path>
+            </svg>
+          </button>
+          <a href="book.html" class="btn btn-shield-primary ms-1">
+            <i data-lucide="calendar-check" style="width:18px; height:18px;"></i>
+            Book
+          </a>
+        </div>
+      </div>
+
+      <div class="align-items-center gap-2 mobile-nav-controls">
+        <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation" title="Toggle Navigation Menu">
+          <div class="glass-card nav-hamburger-icon rounded-circle d-flex align-items-center justify-content-center"
+            style="width:40px; height:40px; border: 1.5px solid rgba(20, 184, 166, 0.4);">
+            <i data-lucide="menu" style="width:20px; height:20px;"></i>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileNavDrawer"
+    aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 p-4">
+      <a class="brand-logo text-decoration-none" href="index.html">
+        <div class="brand-icon">
+          <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
+        </div>
+        <span class="brand-text">Safe<span class="text-teal">Shield</span></span>
+      </a>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-4 d-flex flex-column justify-content-between">
+      <div class="d-flex align-items-center justify-content-center gap-3 p-2 mb-3 rounded-pill border border-secondary border-opacity-25 bg-white bg-opacity-10">
+        <button id="themeToggleBtnMobile" class="btn-nav-action" title="Toggle Light / Dark Theme" aria-label="Toggle Theme">
+          <i data-lucide="moon" id="themeIconMobile" style="width:18px; height:18px;"></i>
+        </button>
+        <button id="rtlToggleBtnMobile" class="btn-nav-action" title="Toggle LTR / RTL Mode" aria-label="Toggle RTL">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" id="rtlIconMobile">
+            <path d="M20 7H4"></path>
+            <path d="m9 3-5 4 5 4"></path>
+            <path d="M4 17h16"></path>
+            <path d="m15 13 5 4-5 4"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-nav-list d-flex flex-column gap-2">
+        <div class="mobile-nav-dropdown">
+          <button class="mobile-nav-link w-100 justify-content-between border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHomeSubmenu" aria-expanded="false" aria-controls="mobileHomeSubmenu">
+            <span>Home</span>
+            <i data-lucide="chevron-down" style="width:16px;"></i>
+          </button>
+          <div class="collapse ps-3 mt-1" id="mobileHomeSubmenu">
+            <a href="index.html" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+              Home 1 (Healthcare Shield)
+            </a>
+            <a href="home-2.html" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+              Home 2 (Emergency Defense)
+            </a>
+          </div>
+        </div>
+
+        <a href="about.html" class="mobile-nav-link justify-content-start">About</a>
+        <a href="treatments.html" class="mobile-nav-link justify-content-start">Treatments</a>
+        <a href="packages.html" class="mobile-nav-link justify-content-start">Packages</a>
+        <a href="safety.html" class="mobile-nav-link active justify-content-start">Safety</a>
+        <a href="pricing.html" class="mobile-nav-link justify-content-start">Pricing</a>
+        <a href="contact.html" class="mobile-nav-link justify-content-start">Contact</a>
+      </div>
+
+      <div class="mobile-nav-footer pt-4 border-top border-secondary border-opacity-25 text-center">
+        <a href="book.html" class="btn btn-shield-primary w-100 mb-3">
+          <i data-lucide="calendar-check" style="width:18px;"></i> Book
+        </a>
+        <a href="tel:18005557443" class="text-teal text-decoration-none font-heading fw-bold d-block mb-1">
+          <i data-lucide="phone-incoming" style="width:16px;" class="me-1"></i> 24/7 Hotline: 1-800-555-SHIELD
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INNER PAGE HERO / BREADCRUMB -->
+  <section class="page-hero-section text-center">
+    <div class="container position-relative" style="z-index: 2;">
+      <nav aria-label="breadcrumb">
+        <div class="breadcrumb-custom">
+          <a href="index.html"><i data-lucide="home" style="width:14px; margin-right:4px;"></i> Home</a>
+          <span class="separator">/</span>
+          <span class="current">Chemical Safety Standards</span>
+        </div>
+      </nav>
+      <h1 class="hero-title text-dark mb-3">WHO & EPA Approved <span class="text-gradient">Safety Science</span></h1>
+      <p class="section-subtitle page-subtitle mx-auto">100% odorless, eco-compatible, and pediatric-safe formulations designed for healthcare campuses and loving family homes.</p>
+    </div>
+  </section>
+
+  <!-- SAFETY PILLARS & INFOGRAPHICS -->
+  <section class="py-5 bg-white position-relative">
+    <div class="container py-4">
+      <div class="text-center mb-5 gsap-fade-up">
+        <span class="section-tag"><i data-lucide="shield-check" style="width:16px;"></i> Non-Toxic Assurance</span>
+        <h2 class="section-title">The 4 Pillars of SafeShield Chemical Purity</h2>
+        <p class="section-subtitle">How we deliver complete pest destruction with zero risk to humans and domestic animals.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Pillar 1: Pediatric Safety -->
+        <div class="col-md-6 col-lg-3">
+          <div class="safety-card p-4 glass-card h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="baby" style="width:24px; height:24px;"></i>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">Pediatric Safe</h3>
+              <p class="small text-muted mb-0">Classified under EPA Category IV toxicity — the lowest risk category in global toxicology standards. Safe for crawling infants.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> 0% Endocrine Disruptors
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2: Pet Bio-Compatibility -->
+        <div class="col-md-6 col-lg-3">
+          <div class="safety-card p-4 glass-card h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="paw-print" style="width:24px; height:24px;"></i>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">Pet Bio-Compatible</h3>
+              <p class="small text-muted mb-0">Formulated without permethrin compounds harmful to cats. Tested extensively for canine, feline, and avian biological safety.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> Safe for Dogs & Cats
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Odorless & Zero VOCs -->
+        <div class="col-md-6 col-lg-3">
+          <div class="safety-card p-4 glass-card h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="wind" style="width:24px; height:24px;"></i>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">100% Odorless (0 VOC)</h3>
+              <p class="small text-muted mb-0">No chemical vapors, fumes, or synthetic fragrances. You can remain comfortably in your living room or office during treatment.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> No Need to Vacate Space
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Non-Staining Micro-Capsules -->
+        <div class="col-md-6 col-lg-3">
+          <div class="safety-card p-4 glass-card h-100 text-center text-lg-start d-flex flex-column justify-content-between">
+            <div>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="sparkles" style="width:24px; height:24px;"></i>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">Non-Staining Barrier</h3>
+              <p class="small text-muted mb-0">Water-based polymer carriers leave zero residue or discoloration on hardwood, imported marble, upholstery, or wallpaper.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> Invisible Surface Protection
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATION SHOWCASE -->
+  <section class="py-5 position-relative" style="background:var(--light-bg);">
+    <div class="container py-4">
+      <div class="text-center mb-5 gsap-fade-up">
+        <span class="section-tag"><i data-lucide="award" style="width:16px;"></i> Official Standards</span>
+        <h2 class="section-title">Regulatory Approvals & Global Compliance</h2>
+        <p class="section-subtitle">Our chemistries adhere to strict governmental and healthcare benchmarks.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="rounded-circle bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+              <i data-lucide="check-circle-2" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-2">EPA (United States)</h3>
+            <p class="small text-muted mb-0">Registered under environmental pesticide safety statutes with approved pediatric and commercial kitchen protocols.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="rounded-circle bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+              <i data-lucide="globe" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-2">WHO (World Health Organization)</h3>
+            <p class="small text-muted mb-0">Compliant with WHO Pesticide Evaluation Scheme (WHOPES) standards for global vector management and public safety.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card p-4 h-100 text-center">
+            <div class="rounded-circle bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+              <i data-lucide="utensils" style="width:28px; height:28px;"></i>
+            </div>
+            <h3 class="h5 font-heading text-dark mb-2">HACCP & FDA Food Safety</h3>
+            <p class="small text-muted mb-0">Certified for deployment in commercial food manufacturing, restaurant storage zones, and packaging centers without risk of contamination.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="py-5 bg-white position-relative">
+    <div class="container py-4">
+      <div class="p-4 p-md-5 rounded-4 text-white text-center position-relative overflow-hidden shadow-lg"
+        style="background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);">
+        <div class="position-relative" style="z-index: 2;">
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-heading fw-bold mb-3">Safe & Proven</span>
+          <h2 class="text-white font-heading fw-bold mb-3" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);">
+            Experience Safe, Odorless Pest Protection Today
+          </h2>
+          <p class="text-white-50 max-w-600 mx-auto mb-4 fs-6">
+            Book an inspection with our certified technicians and receive full Safety Data Sheets (SDS) for your property.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="book.html" class="btn btn-shield-accent btn-lg">
+              <i data-lucide="calendar-check" style="width:20px;"></i> Book Safe Treatment
+            </a>
+            <a href="contact.html" class="btn btn-shield-outline text-white btn-lg" style="border-color: rgba(255,255,255,0.4); color:#FFF !important;">
+              <i data-lucide="help-circle" style="width:20px;"></i> Ask Safety Questions
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-5 text-center text-lg-start">
+        <div class="col-lg-4">
+          <a class="brand-logo text-decoration-none justify-content-center justify-content-lg-start mb-3" href="index.html">
+            <div class="brand-icon">
+              <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
+            </div>
+            <span class="brand-text footer-brand-text">Safe<span class="text-teal">Shield</span></span>
+          </a>
+          <p class="small text-muted mb-4">SafeShield is an industry-leading healthcare and technology-driven pest
+            control brand providing eco-friendly, WHO-approved fumigation & bio-barrier protection.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Facebook" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Instagram" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="X (Twitter)" title="X (Twitter)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="LinkedIn" title="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="font-heading text-white fs-6 mb-3">Quick Navigation</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html" class="text-muted">Home 1 (Healthcare)</a></li>
+            <li><a href="home-2.html" class="text-muted">Home 2 (Emergency)</a></li>
+            <li><a href="about.html" class="text-muted">About Us</a></li>
+            <li><a href="treatments.html" class="text-muted">Treatments</a></li>
+            <li><a href="packages.html" class="text-muted">Packages</a></li>
+            <li><a href="safety.html" class="text-muted">Chemical Safety</a></li>
+            <li><a href="pricing.html" class="text-muted">Pricing Matrix</a></li>
+            <li><a href="contact.html" class="text-muted">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h5 class="font-heading text-white fs-6 mb-3">Pest Solutions</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="treatments.html" class="text-muted">Termite Defense</a></li>
+            <li><a href="treatments.html" class="text-muted">Cockroach Bio-Barrier</a></li>
+            <li><a href="treatments.html" class="text-muted">Bed Bug Thermal Heat</a></li>
+            <li><a href="treatments.html" class="text-muted">Rodent Exclusion</a></li>
+            <li><a href="treatments.html" class="text-muted">Mosquito Fogging</a></li>
+            <li><a href="treatments.html" class="text-muted">Commercial Fumigation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 text-center text-lg-start">
+          <h5 class="font-heading text-white fs-6 mb-3">Newsletter & Safety Updates</h5>
+          <p class="small text-muted mb-3">Subscribe to receive quarterly seasonal pest alerts and homeowner protection guides.</p>
+          <div class="footer-newsletter-box mb-3">
+            <input type="email" class="form-control form-control-custom" placeholder="Enter your email">
+            <button class="btn btn-shield-primary" type="button">Subscribe</button>
+          </div>
+          <div class="small text-muted" style="font-size:0.75rem;">© 2026 SafeShield Pest Control LLC. All rights reserved. Registered Pest Control License #PC-88492.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="floating-actions d-flex flex-column gap-2">
+    <button id="scrollTopBtn" class="fab-btn fab-scroll-top" aria-label="Scroll to top" title="Scroll to Top">
+      <i data-lucide="arrow-up" style="width:20px; height:20px;"></i>
+    </button>
+    <a href="https://wa.me/15550000000" target="_blank" rel="noopener" class="fab-btn fab-whatsapp" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+  </div>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <!-- Bootstrap 5.3 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- GSAP Core CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+
+  <!-- Custom Main JS -->
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

@@ -59,17 +59,22 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
+h1, h2, h3, h4, h5, h6, .font-heading, .hero-title, .section-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
+  font-weight: 600 !important;
   letter-spacing: -0.02em;
   color: var(--dark);
 }
 
 .brand-logo, .brand-title, .navbar-brand {
   font-family: 'Space Grotesk', sans-serif !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   letter-spacing: -0.02em !important;
+}
+
+.section-subtitle, .hero-subtitle, .lead, .page-subtitle {
+  font-weight: 450;
+  line-height: 1.6;
 }
 
 a {
@@ -245,13 +250,13 @@ a {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1050;
-  padding: 18px 0;
-  transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 0;
+  transition: padding 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
   will-change: padding, background-color;
   transform: translateZ(0);
 }
 .navbar-safeshield.scrolled {
-  padding: 12px 0;
+  padding: 6px 0;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
@@ -259,23 +264,37 @@ a {
 
 .brand-logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1.35rem;
   color: var(--dark);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  text-decoration: none;
+}
+.brand-logo .brand-text {
+  color: #0F172A;
+  font-weight: 600;
+}
+[data-theme="dark"] .brand-logo .brand-text,
+footer .brand-logo .brand-text,
+.offcanvas-custom .brand-logo .brand-text {
+  color: #FFFFFF !important;
+}
+.brand-logo .text-teal {
+  color: var(--secondary) !important;
 }
 .brand-icon {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #FFF;
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.25);
+  flex-shrink: 0;
 }
 
 .navbar-menu {
@@ -1026,6 +1045,47 @@ footer .btn-outline-secondary:hover,
 }
 
 /* Home 2 Premium Redesign Styling */
+/* Home 2 Premium Redesign Styling & Navbar Contrast */
+.page-home2 .navbar-safeshield:not(.scrolled) .brand-logo .brand-text {
+  color: #FFFFFF !important;
+}
+.page-home2 .navbar-safeshield:not(.scrolled) .nav-link-custom {
+  color: #E2E8F0 !important;
+}
+.page-home2 .navbar-safeshield:not(.scrolled) .nav-link-custom:hover {
+  color: var(--secondary) !important;
+  background: rgba(20, 184, 166, 0.2) !important;
+}
+.page-home2 .navbar-safeshield:not(.scrolled) .nav-link-custom.active,
+.page-home2 .navbar-safeshield:not(.scrolled) #homeDropdown.active {
+  color: #FFFFFF !important;
+  background: var(--primary) !important;
+}
+.page-home2 .navbar-safeshield:not(.scrolled) .btn-nav-action {
+  background: rgba(28, 37, 65, 0.85) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+.page-home2 .navbar-safeshield.scrolled {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.page-home2 .navbar-safeshield.scrolled .brand-logo .brand-text {
+  color: #FFFFFF !important;
+}
+.page-home2 .navbar-safeshield.scrolled .nav-link-custom {
+  color: #CBD5E1 !important;
+}
+.page-home2 .navbar-safeshield.scrolled .nav-link-custom:hover {
+  color: var(--secondary) !important;
+  background: rgba(20, 184, 166, 0.15) !important;
+}
+.page-home2 .navbar-safeshield.scrolled .btn-nav-action {
+  background: rgba(28, 37, 65, 0.9) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .hero-home2-section,
 .hero-home2-redesign {
   background: linear-gradient(135deg, #0B132B 0%, #1C2541 60%, #0F172A 100%) !important;
@@ -1040,8 +1100,21 @@ footer .btn-outline-secondary:hover,
 .hero-home2-redesign .hero-subtitle {
   color: #F8FAFC !important;
   opacity: 0.95 !important;
-  font-weight: 500;
+  font-weight: 450;
   text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+.hero-home2-redesign .hero-floating-card {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6) !important;
+}
+.hero-home2-redesign .hero-floating-card .text-dark,
+.hero-home2-redesign .hero-floating-card .fw-bold {
+  color: #FFFFFF !important;
+}
+.hero-home2-redesign .hero-floating-card .text-muted,
+.hero-home2-redesign .hero-floating-card .text-white-50 {
+  color: #CBD5E1 !important;
 }
 .hero-home2-redesign .glass-dark {
   background: rgba(15, 23, 42, 0.92) !important;
@@ -1492,6 +1565,104 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
   background: rgba(20, 184, 166, 0.25) !important;
   border-color: var(--secondary) !important;
   color: var(--secondary) !important;
+}
+
+/* Diagnostic Report Card - High Contrast Guarantee in Both Themes */
+.diagnostic-report-card {
+  background: linear-gradient(135deg, #0A192F 0%, #0F766E 100%) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(20, 184, 166, 0.4) !important;
+  box-shadow: 0 16px 36px rgba(10, 25, 47, 0.35) !important;
+  border-radius: var(--radius-md) !important;
+}
+.diagnostic-report-card * {
+  color: #FFFFFF;
+}
+.diagnostic-report-card .report-tag {
+  color: #2DD4BF !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em;
+}
+.diagnostic-report-card .report-badge {
+  color: #0F172A !important;
+  background-color: #FBBF24 !important;
+  font-weight: 600 !important;
+}
+.diagnostic-report-card h4, 
+.diagnostic-report-card h5 {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+.diagnostic-report-card p, 
+.diagnostic-report-card #calcProtocolText {
+  color: #E2E8F0 !important;
+  font-weight: 450 !important;
+  line-height: 1.5;
+  opacity: 0.95 !important;
+}
+.diagnostic-report-card .time-label {
+  color: #CBD5E1 !important;
+  font-weight: 450 !important;
+  opacity: 0.9 !important;
+}
+.diagnostic-report-card .time-val,
+.diagnostic-report-card #calcTimeText {
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+}
+[data-theme="dark"] .diagnostic-report-card {
+  background: linear-gradient(135deg, #070D1B 0%, #115E59 100%) !important;
+  border: 1px solid rgba(45, 212, 191, 0.4) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Inner Page Hero Header & Breadcrumb */
+.page-hero-section {
+  position: relative;
+  padding-top: 110px;
+  padding-bottom: 50px;
+  background: radial-gradient(circle at 10% 20%, rgba(20, 184, 166, 0.12) 0%, rgba(248, 250, 252, 1) 60%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+[data-theme="dark"] .page-hero-section {
+  background: radial-gradient(circle at 10% 20%, rgba(20, 184, 166, 0.15) 0%, rgba(11, 19, 43, 1) 70%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.breadcrumb-custom {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(15, 118, 110, 0.08);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.breadcrumb-custom a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb-custom a:hover {
+  text-decoration: underline;
+}
+.breadcrumb-custom .separator {
+  color: #94A3B8;
+  font-size: 0.8rem;
+}
+.breadcrumb-custom .current {
+  color: #64748B;
+  font-weight: 500;
+}
+[data-theme="dark"] .breadcrumb-custom {
+  background: rgba(20, 184, 166, 0.15);
+}
+[data-theme="dark"] .breadcrumb-custom a {
+  color: var(--secondary);
+}
+[data-theme="dark"] .breadcrumb-custom .current {
+  color: #CBD5E1;
 }
 
 /* ==========================================================================

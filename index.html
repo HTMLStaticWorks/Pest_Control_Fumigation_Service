@@ -14,7 +14,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="alternate icon" href="favicon.svg">
 
-  <!-- Preconnect to Font & Library CDNs -->
+  <!-- Preconnect to CDNs -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
   <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -51,36 +53,33 @@
   <nav class="navbar navbar-expand-lg navbar-safeshield">
     <div class="container">
       <!-- Brand Logo -->
-      <a class="navbar-brand brand-logo" href="#home">
+      <a class="navbar-brand brand-logo" href="index.html">
         <div class="brand-icon">
-          <i data-lucide="shield-check" style="width:24px; height:24px;"></i>
+          <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
         </div>
-        <span>Safe<span class="text-teal" style="color:var(--primary);">Shield</span></span>
+        <span class="brand-text">Safe<span class="text-teal">Shield</span></span>
       </a>
 
       <!-- Desktop Nav Menu (Hidden on Mobile & Tablet <= 1024px) -->
       <div class="collapse navbar-collapse desktop-nav-menu" id="desktopNavbar">
         <ul class="navbar-menu nav mx-auto align-items-center">
           <li class="nav-item dropdown">
-            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="homeDropdown" role="button"
+            <a class="nav-link nav-link-custom dropdown-toggle active" href="#" id="homeDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Home <i data-lucide="chevron-down" class="ms-1" style="width:14px; height:14px;"></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-custom shadow-lg border-0" aria-labelledby="homeDropdown">
-              <li><a class="dropdown-item py-2 fw-semibold" href="#home"><i data-lucide="shield-check"
-                    class="me-2 text-teal" style="width:16px;"></i> Home 1 (Healthcare Shield)</a></li>
-              <li><a class="dropdown-item py-2 fw-semibold" href="#home2"><i data-lucide="zap" class="me-2 text-warning"
-                    style="width:16px;"></i> Home 2 (Emergency Defense)</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold active" href="index.html">Home 1 (Healthcare Shield)</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="home-2.html">Home 2 (Emergency Defense)</a></li>
             </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#treatments">Treatments</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#packages">Packages</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#safety">Safety</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#pricing">Pricing</a></li>
-
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="treatments.html">Treatments</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="safety.html">Safety</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
         </ul>
 
         <!-- Action Buttons: Theme Toggle, RTL Toggle, Book Button -->
@@ -97,7 +96,7 @@
               <path d="m15 13 5 4-5 4"></path>
             </svg>
           </button>
-          <a href="#book" class="btn btn-shield-primary ms-1">
+          <a href="book.html" class="btn btn-shield-primary ms-1">
             <i data-lucide="calendar-check" style="width:18px; height:18px;"></i>
             Book
           </a>
@@ -109,8 +108,8 @@
         <button class="navbar-toggler border-0 p-0 shadow-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Toggle navigation" title="Toggle Navigation Menu">
           <div class="glass-card nav-hamburger-icon rounded-circle d-flex align-items-center justify-content-center"
-            style="width:44px; height:44px; border: 1.5px solid rgba(20, 184, 166, 0.4);">
-            <i data-lucide="menu" style="width:22px; height:22px;"></i>
+            style="width:40px; height:40px; border: 1.5px solid rgba(20, 184, 166, 0.4);">
+            <i data-lucide="menu" style="width:20px; height:20px;"></i>
           </div>
         </button>
       </div>
@@ -121,12 +120,12 @@
   <div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileNavDrawer"
     aria-labelledby="mobileNavDrawerLabel">
     <div class="offcanvas-header border-bottom border-secondary border-opacity-25 p-4">
-      <div class="brand-logo text-white">
+      <a class="brand-logo text-decoration-none" href="index.html">
         <div class="brand-icon">
-          <i data-lucide="shield-check" style="width:22px; height:22px;"></i>
+          <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
         </div>
-        <span>SafeShield</span>
-      </div>
+        <span class="brand-text">Safe<span class="text-teal">Shield</span></span>
+      </a>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-4 d-flex flex-column justify-content-between">
@@ -148,30 +147,30 @@
       <div class="mobile-nav-list d-flex flex-column gap-2">
         <!-- Home Dropdown Accordion / Submenu -->
         <div class="mobile-nav-dropdown">
-          <button class="mobile-nav-link active w-100 justify-content-between border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHomeSubmenu" aria-expanded="false" aria-controls="mobileHomeSubmenu">
+          <button class="mobile-nav-link active w-100 justify-content-between border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#mobileHomeSubmenu" aria-expanded="true" aria-controls="mobileHomeSubmenu">
             <span>Home</span>
             <i data-lucide="chevron-down" style="width:16px;"></i>
           </button>
           <div class="collapse show ps-3 mt-1" id="mobileHomeSubmenu">
-            <a href="#home" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+            <a href="index.html" class="mobile-nav-sublink active d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
               Home 1 (Healthcare Shield)
             </a>
-            <a href="#home2" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
+            <a href="home-2.html" class="mobile-nav-sublink d-flex align-items-center gap-2 py-2 text-white-50 text-decoration-none fw-semibold" style="font-size:0.95rem;">
               Home 2 (Emergency Defense)
             </a>
           </div>
         </div>
 
-        <a href="#about" class="mobile-nav-link justify-content-start">About</a>
-        <a href="#treatments" class="mobile-nav-link justify-content-start">Treatments</a>
-        <a href="#packages" class="mobile-nav-link justify-content-start">Packages</a>
-        <a href="#safety" class="mobile-nav-link justify-content-start">Safety</a>
-        <a href="#pricing" class="mobile-nav-link justify-content-start">Pricing</a>
-        <a href="#contact" class="mobile-nav-link justify-content-start">Contact</a>
+        <a href="about.html" class="mobile-nav-link justify-content-start">About</a>
+        <a href="treatments.html" class="mobile-nav-link justify-content-start">Treatments</a>
+        <a href="packages.html" class="mobile-nav-link justify-content-start">Packages</a>
+        <a href="safety.html" class="mobile-nav-link justify-content-start">Safety</a>
+        <a href="pricing.html" class="mobile-nav-link justify-content-start">Pricing</a>
+        <a href="contact.html" class="mobile-nav-link justify-content-start">Contact</a>
       </div>
 
       <div class="mobile-nav-footer pt-4 border-top border-secondary border-opacity-25 text-center">
-        <a href="#book-inspection" class="btn btn-shield-primary w-100 mb-3" data-bs-dismiss="offcanvas">
+        <a href="book.html" class="btn btn-shield-primary w-100 mb-3">
           <i data-lucide="calendar-check" style="width:18px;"></i> Book
         </a>
         <a href="tel:18005557443" class="text-teal text-decoration-none font-heading fw-bold d-block mb-1">
@@ -200,95 +199,59 @@
             protection. 100% elimination guaranteed with official warranty.
           </p>
 
-          <div
-            class="hero-cta-wrap d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mb-5">
-            <a href="#book-inspection" class="btn btn-shield-primary btn-lg">
+          <div class="hero-cta-wrap d-flex flex-column flex-sm-row align-items-center gap-3 justify-content-center justify-content-lg-start mb-4">
+            <a href="book.html" class="btn btn-shield-primary btn-lg">
               <i data-lucide="calendar" style="width:20px; height:20px;"></i>
-              Book Inspection
+              Schedule Inspection
             </a>
-            <a href="#contact" class="btn btn-shield-outline btn-lg">
-              <i data-lucide="file-text" style="width:20px; height:20px;"></i>
-              Get Free Quote
+            <a href="treatments.html" class="btn btn-shield-outline btn-lg">
+              <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
+              View Treatments
             </a>
           </div>
 
-          <!-- Hero Thumbnail Showcase Bar (Using Local Images with async decoding) -->
-          <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-4">
-            <img src="image/aa.jpg" alt="SafeShield Hero 1" decoding="async"
-              class="rounded-circle border border-2 border-white shadow-sm"
-              style="width:48px; height:48px; object-fit:cover;">
-            <img src="image/ac.jpg" alt="SafeShield Hero 2" decoding="async"
-              class="rounded-circle border border-2 border-white shadow-sm"
-              style="width:48px; height:48px; object-fit:cover;">
-            <img src="image/aqa.jpg" alt="SafeShield Hero 3" decoding="async"
-              class="rounded-circle border border-2 border-white shadow-sm"
-              style="width:48px; height:48px; object-fit:cover;">
-            <img src="image/cc.jpg" alt="SafeShield Hero 4" decoding="async"
-              class="rounded-circle border border-2 border-white shadow-sm"
-              style="width:48px; height:48px; object-fit:cover;">
-            <span class="small font-heading fw-bold text-dark ms-2">+50 Certified Field Personnel</span>
-          </div>
-
-          <!-- Trust Bar -->
-          <div
-            class="hero-trust-box glass-card p-3 d-inline-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4">
+          <!-- Trust Badges Under Hero CTA -->
+          <div class="pt-3 border-top border-secondary border-opacity-10 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4">
             <div class="d-flex align-items-center gap-2">
-              <div class="rounded-circle p-2" style="background:rgba(20,184,166,0.15); color:var(--primary);">
-                <i data-lucide="shield-check" style="width:22px; height:22px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold small text-dark">10,000+ Homes</div>
-                <div class="text-muted" style="font-size:0.75rem;">100% Protected</div>
-              </div>
+              <i data-lucide="check-circle" class="text-teal" style="width:18px;"></i>
+              <span class="small fw-semibold text-dark">EPA & WHO Certified</span>
             </div>
-            <div class="vr opacity-25 d-none d-sm-block" style="height:30px;"></div>
             <div class="d-flex align-items-center gap-2">
-              <div class="rounded-circle p-2" style="background:rgba(132,204,22,0.15); color:#65A30D;">
-                <i data-lucide="leaf" style="width:22px; height:22px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold small text-dark">Eco-Friendly</div>
-                <div class="text-muted" style="font-size:0.75rem;">Child & Pet Safe</div>
-              </div>
+              <i data-lucide="check-circle" class="text-teal" style="width:18px;"></i>
+              <span class="small fw-semibold text-dark">Odorless & Pet Safe</span>
             </div>
-            <div class="vr opacity-25 d-none d-sm-block" style="height:30px;"></div>
             <div class="d-flex align-items-center gap-2">
-              <div class="rounded-circle p-2" style="background:rgba(15,23,42,0.08); color:var(--dark);">
-                <i data-lucide="clock" style="width:22px; height:22px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold small text-dark">Same-Day Service</div>
-                <div class="text-muted" style="font-size:0.75rem;">60-Min Dispatch</div>
-              </div>
+              <i data-lucide="check-circle" class="text-teal" style="width:18px;"></i>
+              <span class="small fw-semibold text-dark">100% Eradication Guarantee</span>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-5 mt-5 mt-lg-0 text-center position-relative">
-          <div class="hero-image-wrapper position-relative d-inline-block w-100">
-            <video class="img-fluid rounded-4 shadow-lg border border-white border-4 w-100" autoplay loop muted playsinline style="max-height:520px; object-fit:cover;">
-              <source src="video/4145551-uhd_3840_2160_25fps.mp4" type="video/mp4">
-            </video>
+        <div class="col-lg-5 position-relative mt-5 mt-lg-0 text-center">
+          <div class="position-relative d-inline-block">
+            <img src="image/gAsEost4H_8qdUAQbUh-_gx9fKb16lxi4JfPjy528gY5lxQEg0M_mdpoazIEBCY6Q8I_8fZDAvuX5GPni-6Kei-FLHQzjhBIvpVg1Cu2tzSbiRP2tybSHXHvfMoDkCsq9br-HuHo_Bdjeb3uBTpwvG6X3rXhKZt5qklQ1veimRwvmb9I2S4OjnxdC.jpg"
+              alt="SafeShield Healthcare Grade Pest Control Specialist" class="img-fluid rounded-4 shadow-lg"
+              style="max-height: 480px; object-fit: cover; border: 4px solid #FFF;">
 
-            <!-- Floating 3D Badge 1 -->
-            <div class="hero-floating-card" style="top: -20px; left: -20px;">
-              <div class="rounded-circle p-2 bg-success text-white">
-                <i data-lucide="check-circle-2" style="width:22px;"></i>
+            <!-- Floating Micro-Capsule Feature Card 1 -->
+            <div class="hero-floating-card top-0 start-0 translate-middle-y" style="margin-top: 20px;">
+              <div class="p-2 rounded-circle bg-teal-subtle text-teal">
+                <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
               </div>
               <div>
-                <div class="fw-bold text-dark small">Government Approved</div>
-                <div class="text-muted" style="font-size:0.75rem;">License #PC-88492</div>
+                <div class="fw-bold text-dark small">100% Odorless Barrier</div>
+                <div class="text-muted" style="font-size:0.75rem;">Micro-Encapsulated</div>
               </div>
             </div>
 
-            <!-- Floating 3D Badge 2 -->
-            <div class="hero-floating-card" style="bottom: 30px; right: -20px; animation-delay: -2s;">
-              <div class="rounded-circle p-2 bg-warning text-dark">
-                <i data-lucide="star" style="width:22px;"></i>
+            <!-- Floating Rapid Response Feature Card 2 -->
+            <div class="hero-floating-card bottom-0 end-0 translate-middle-y" style="margin-bottom: 20px;">
+              <div class="p-2 rounded-circle bg-warning-subtle text-warning">
+                <i data-lucide="clock" style="width:20px; height:20px;"></i>
               </div>
               <div>
-                <div class="fw-bold text-dark small">4.9 / 5 Rating</div>
-                <div class="text-muted" style="font-size:0.75rem;">Based on 2,400+ Reviews</div>
+                <div class="fw-bold text-dark small">60-Min Emergency Response</div>
+                <div class="text-muted" style="font-size:0.75rem;">Rapid Citywide Dispatch</div>
               </div>
             </div>
           </div>
@@ -329,20 +292,20 @@
               </div>
 
               <div class="col-md-6">
-                <div class="p-4 rounded-4 text-white" style="background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);">
+                <div class="diagnostic-report-card p-4 rounded-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
-                    <span class="small font-heading text-uppercase text-teal fw-semibold">Diagnostic Report</span>
-                    <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold">High Priority</span>
+                    <span class="small font-heading text-uppercase report-tag fw-semibold">Diagnostic Report</span>
+                    <span class="badge report-badge px-3 py-1 rounded-pill fw-bold">High Priority</span>
                   </div>
-                  <h4 class="h5 font-heading mb-2 text-white">Recommended Protocol:</h4>
-                  <p class="small opacity-75 mb-3" id="calcProtocolText">Micro-Encapsulated Bio-Barrier + Dual-Action Nest Elimination Gel Baiting System.</p>
+                  <h4 class="h5 font-heading mb-2">Recommended Protocol:</h4>
+                  <p class="small mb-3" id="calcProtocolText">Micro-Encapsulated Bio-Barrier + Dual-Action Nest Elimination Gel Baiting System.</p>
                   
                   <div class="pt-3 border-top border-white border-opacity-25 d-flex flex-column flex-lg-row align-items-center align-items-lg-center justify-content-between gap-3 text-center text-lg-start">
                     <div>
-                      <div class="small opacity-75">Estimated Elimination Time:</div>
-                      <div class="fw-bold fs-5 text-white" id="calcTimeText">24 to 48 Hours</div>
+                      <div class="small time-label">Estimated Elimination Time:</div>
+                      <div class="fw-bold fs-5 time-val" id="calcTimeText">24 to 48 Hours</div>
                     </div>
-                    <a href="#book-inspection" class="btn btn-shield-accent btn-md w-100 w-lg-auto">
+                    <a href="book.html" class="btn btn-shield-accent btn-md w-100 w-lg-auto">
                       <i data-lucide="check-circle-2" style="width:16px;"></i> Book Audit
                     </a>
                   </div>
@@ -355,7 +318,7 @@
     </div>
   </section>
 
-  <!-- SECTION 1.2: HOME 1 — 4-STEP BIO-SHIELD ERADICATION WORKFLOW -->
+  <!-- SECTION 1.2: 4-STEP BIO-SHIELD ERADICATION WORKFLOW -->
   <section id="home1-workflow" class="py-5 position-relative" style="background:var(--light-bg);">
     <div class="container py-4">
       <div class="text-center mb-5 gsap-fade-up">
@@ -368,9 +331,15 @@
         <div class="col-md-6 col-lg-3">
           <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
             <div>
-              <div class="process-step-num mb-3 mx-auto mx-lg-0">01</div>
-              <h4 class="h5 font-heading text-dark mb-2">Thermal Void Scan</h4>
-              <p class="text-muted small mb-0">Infrared acoustic sensor audit to map hidden nests behind walls, ceilings, and under floors.</p>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="scan" style="width:24px; height:24px;"></i>
+              </div>
+              <div class="text-teal font-heading fw-bold small mb-1">PHASE 01</div>
+              <h3 class="h5 font-heading text-dark mb-2">Thermal Spectrum Scan</h3>
+              <p class="small text-muted mb-0">High-resolution infrared detection mapping moisture and concealed nest colonies behind walls and floorings.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> 100% Nest Location Accuracy
             </div>
           </div>
         </div>
@@ -378,9 +347,15 @@
         <div class="col-md-6 col-lg-3">
           <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
             <div>
-              <div class="process-step-num mb-3 mx-auto mx-lg-0" style="background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%); color:#0F172A;">02</div>
-              <h4 class="h5 font-heading text-dark mb-2">Bio-Formulation</h4>
-              <p class="text-muted small mb-0">WHO-approved micro-encapsulated non-repellent active formula safe for children, pets, and food prep areas.</p>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="flask-conical" style="width:24px; height:24px;"></i>
+              </div>
+              <div class="text-teal font-heading fw-bold small mb-1">PHASE 02</div>
+              <h3 class="h5 font-heading text-dark mb-2">Micro-Encapsulated Gel</h3>
+              <p class="small text-muted mb-0">Targeted pheromone-infused matrices carried back to queen colonies for total nest extermination in 24 hours.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> Odorless & Zero Airborne Residue
             </div>
           </div>
         </div>
@@ -388,9 +363,15 @@
         <div class="col-md-6 col-lg-3">
           <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
             <div>
-              <div class="process-step-num mb-3 mx-auto mx-lg-0">03</div>
-              <h4 class="h5 font-heading text-dark mb-2">Aerosol Diffusion</h4>
-              <p class="text-muted small mb-0">Sub-micron fogging and barrier dispersion targeting core breeding colonies for 100% eradication.</p>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="shield-alert" style="width:24px; height:24px;"></i>
+              </div>
+              <div class="text-teal font-heading fw-bold small mb-1">PHASE 03</div>
+              <h3 class="h5 font-heading text-dark mb-2">Ultrasonic Perimeter Seal</h3>
+              <p class="small text-muted mb-0">Sanitary silicone exclusion barriers and pest-repelling botanical perimeter coatings preventing future re-entry.</p>
+            </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> Long-term Exclusion Barrier
             </div>
           </div>
         </div>
@@ -398,83 +379,15 @@
         <div class="col-md-6 col-lg-3">
           <div class="glass-card p-4 h-100 text-center text-lg-start d-flex flex-column justify-content-between">
             <div>
-              <div class="process-step-num mb-3 mx-auto mx-lg-0" style="background: linear-gradient(135deg, var(--accent) 0%, #65A30D 100%); color:#0F172A;">04</div>
-              <h4 class="h5 font-heading text-dark mb-2">Warranty Audit</h4>
-              <p class="text-muted small mb-0">Official certificate issuance + 365-day re-treatment warranty and perimeter barrier verification.</p>
+              <div class="rounded-3 bg-teal-subtle text-teal p-3 d-inline-flex mb-3">
+                <i data-lucide="award" style="width:24px; height:24px;"></i>
+              </div>
+              <div class="text-teal font-heading fw-bold small mb-1">PHASE 04</div>
+              <h3 class="h5 font-heading text-dark mb-2">Warranty Certification</h3>
+              <p class="small text-muted mb-0">Comprehensive digital clearance certificate with free return inspection coverage for up to 365 days.</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 1B: HOME 2 — REDESIGNED EMERGENCY & COMMERCIAL COMMAND CENTER HERO -->
-  <section id="home2" class="hero-section hero-home2-redesign d-flex align-items-center py-5 position-relative">
-    <div class="container position-relative py-5" style="z-index: 2;">
-      <div class="row align-items-center min-vh-75">
-        <div class="col-lg-6 order-2 order-lg-1 text-center text-lg-start mt-4 mt-lg-0 hero-content">
-          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-warning bg-opacity-20 text-warning border border-warning border-opacity-50 mb-3">
-            <span class="pulse-live" style="background:#F59E0B;"></span>
-            <span class="small font-heading fw-bold text-uppercase">HOME 2 — 24/7 Rapid Emergency Command</span>
-          </div>
-
-          <h1 class="hero-title text-white">
-            High-Capacity Industrial & Emergency <span class="text-gradient">Fumigation Defense</span>
-          </h1>
-
-          <p class="hero-subtitle text-light opacity-75 fs-5 mb-4 me-lg-4">
-            Rapid 45-minute dispatch for urgent infestations in high-risk residential, hospital, food-processing, and enterprise commercial complexes.
-          </p>
-
-          <!-- Home 2 Command Metrics Bar -->
-          <div class="row g-3 mb-4">
-            <div class="col-6 col-sm-4">
-              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-20 shadow-sm">
-                <div class="font-heading fw-bold text-teal fs-3">45 Min</div>
-                <div class="small text-white fw-medium">Emergency Dispatch</div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4">
-              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-20 shadow-sm">
-                <div class="font-heading fw-bold text-accent fs-3">100%</div>
-                <div class="small text-white fw-medium">Sterilization Rate</div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-4">
-              <div class="glass-dark p-3 text-center rounded-4 h-100 border border-white border-opacity-20 shadow-sm">
-                <div class="font-heading fw-bold text-warning fs-3">24 / 7</div>
-                <div class="small text-white fw-medium">Live Command Center</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-cta-wrap d-flex flex-column flex-md-row gap-3 justify-content-center justify-content-lg-start mb-4">
-            <a href="tel:18005557443" class="btn btn-shield-accent btn-lg">
-              <i data-lucide="phone-call" style="width:18px; height:18px;"></i>
-              24/7 Emergency: 1-800-555-SHIELD
-            </a>
-            <a href="#book-inspection" class="btn btn-shield-primary btn-lg">
-              <i data-lucide="calendar-check" style="width:18px; height:18px;"></i>
-              Book Home 2 Command
-            </a>
-          </div>
-        </div>
-
-        <div class="col-lg-6 order-1 order-lg-2 text-center position-relative">
-          <div class="video-glow-wrapper w-100">
-            <video class="img-fluid rounded-4 w-100" autoplay loop muted playsinline style="max-height:500px; object-fit:cover;">
-              <source src="video/6197561-uhd_3840_2160_25fps.mp4" type="video/mp4">
-            </video>
-
-            <!-- Home 2 Floating Live Dispatch Badge -->
-            <div class="hero-floating-card glass-dark border border-teal text-white" style="top: 15px; right: 15px; background: rgba(15, 23, 42, 0.95);">
-              <div class="rounded-circle p-2 bg-teal text-white">
-                <i data-lucide="shield-alert" style="width:22px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold text-white small">Active Emergency Team</div>
-                <div class="text-teal font-heading fw-semibold" style="font-size:0.75rem;"><span class="pulse-live me-1"></span> 14 Rapid Units On Duty</div>
-              </div>
+            <div class="mt-3 pt-3 border-top border-secondary border-opacity-10 text-teal small fw-semibold">
+              <i data-lucide="check" style="width:14px;"></i> 1-Year Free Re-Treatment Guarantee
             </div>
           </div>
         </div>
@@ -483,1039 +396,189 @@
   </section>
 
   <!-- SECTION 2: WHY CHOOSE US -->
-  <section id="about" class="py-5 bg-white position-relative">
-    <div class="container py-4">
-      <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="award" style="width:16px;"></i> Why Choose Us</span>
-        <h2 class="section-title">Healthcare-Grade Standards For Your Peace of Mind</h2>
-        <p class="section-subtitle">We combine advanced biotechnology, thermal imaging, and WHO-approved formulations to
-          eradicate pests without compromising indoor air quality.</p>
-      </div>
-
-      <!-- About Section Video Feature Banner -->
-      <div class="row align-items-center mb-5 p-4 rounded-4 glass-card shadow-lg border border-secondary border-opacity-25">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="position-relative overflow-hidden rounded-4 shadow-sm">
-            <video class="w-100 rounded-4" style="max-height:360px; object-fit:cover;" autoplay loop muted playsinline>
-              <source src="video/6415826-hd_1920_1080_30fps.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div class="col-lg-6 ps-lg-4 text-center text-lg-start">
-          <span class="badge bg-teal-subtle text-teal fw-bold mb-2 px-3 py-2 rounded-pill" style="background:rgba(20,184,166,0.15); color:var(--primary);">SafeShield In Action</span>
-          <h3 class="h3 font-heading text-dark mb-3">Pioneering Eco-Biotech & Thermal Eradication</h3>
-          <p class="text-muted mb-3">Watch our certified field specialists perform hospital-grade eco-friendly pest inspection and precision fumigation in real-time environments.</p>
-          <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
-            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> Hospital-Grade Non-Toxic Formulations</li>
-            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> Thermal & Acoustic Void Detection</li>
-            <li class="d-flex align-items-center gap-2"><i data-lucide="check-circle-2" class="text-teal me-1" style="width:18px;"></i> 100% Guaranteed Nest Eradication</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row g-4 gsap-stagger-container">
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper">
-              <i data-lucide="badge-check" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Licensed & Certified Specialists</h4>
-            <p class="text-muted small mb-0">Our technicians undergo 200+ hours of medical entomology training and hold
-              state fumigation certifications.</p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper" style="background:rgba(132,204,22,0.12); color:#65A30D;">
-              <i data-lucide="leaf" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Safe & Eco Formulations</h4>
-            <p class="text-muted small mb-0">Botanical and targeted micro-encapsulated treatments safe for newborn
-              babies, elderly, cats, and dogs.</p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper">
-              <i data-lucide="building-2" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Government & Municipality Approved</h4>
-            <p class="text-muted small mb-0">Fully compliant with EPA, WHO, and local health authority standards with
-              official compliance certificates.</p>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper">
-              <i data-lucide="zap" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Same-Day Emergency Dispatch</h4>
-            <p class="text-muted small mb-0">24/7 rapid response team guaranteed to arrive at your door within 60
-              minutes for urgent infestations.</p>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper">
-              <i data-lucide="wallet" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Transparent & Honest Pricing</h4>
-            <p class="text-muted small mb-0">Upfront quotes with no hidden call-out fees or surprise charges. What we
-              quote is what you pay.</p>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="feature-card" data-tilt>
-            <div class="feature-icon-wrapper" style="background:rgba(20,184,166,0.12); color:var(--primary);">
-              <i data-lucide="shield-alert" style="width:30px; height:30px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Extended Re-Treatment Warranty</h4>
-            <p class="text-muted small mb-0">If pests return during the warranty period, our team will re-treat your
-              property free of charge immediately.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: TREATMENT TYPES (12 TREATMENTS WITH LAZY LOADING) -->
-  <section id="treatments" class="py-5 position-relative" style="background:var(--light-bg);">
-    <div class="container py-4">
-      <div class="text-center mb-4 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="bug" style="width:16px;"></i> Comprehensive Services</span>
-        <h2 class="section-title">Specialized Pest Eradication Treatments</h2>
-        <p class="section-subtitle">Customized treatment plans engineered specifically for every pest species and
-          property type.</p>
-
-        <!-- Category Filters -->
-        <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-          <button class="btn btn-shield-primary active" data-treatment-filter="all">All Treatments</button>
-          <button class="btn btn-shield-outline" data-treatment-filter="residential">Residential</button>
-          <button class="btn btn-shield-outline" data-treatment-filter="commercial">Commercial</button>
-          <button class="btn btn-shield-outline" data-treatment-filter="emergency">Specialized & Emergency</button>
-        </div>
-      </div>
-
-      <div class="row g-4 mt-2">
-        <!-- Featured Treatment Video Banner -->
-        <div class="col-12 mb-2 treatment-item" data-category="emergency">
-          <div class="glass-card p-4 rounded-4 shadow-sm border border-secondary border-opacity-25 overflow-hidden">
-            <div class="row align-items-center">
-              <div class="col-lg-6 mb-3 mb-lg-0">
-                <div class="position-relative overflow-hidden rounded-4 shadow-sm">
-                  <video class="w-100 rounded-4" style="max-height:320px; object-fit:cover;" autoplay loop muted playsinline>
-                    <source src="video/9153845-uhd_4096_2160_30fps.mp4" type="video/mp4">
-                  </video>
-                  <span class="position-absolute top-0 start-0 m-3 badge bg-danger text-white px-3 py-2 rounded-pill shadow-sm">Live Field Execution</span>
-                </div>
-              </div>
-              <div class="col-lg-6 text-center text-lg-start ps-lg-4">
-                <span class="badge bg-teal text-white mb-3 d-inline-flex align-items-center px-3 py-2 rounded-pill" style="background:var(--primary); font-size:0.8rem;">Specialized & Emergency</span>
-                <h3 class="h4 font-heading text-dark mb-2">High-Capacity Whole-Facility Fumigation</h3>
-                <p class="text-muted small mb-3">Enterprise-grade deep thermal aerosol gas diffusion for severe infestations, food processing plants, warehouses, and multi-unit residential complexes.</p>
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 pt-3 border-top">
-                  <span class="fw-bold text-teal fs-5">Custom Facility Assessment</span>
-                  <a href="#book-inspection" class="btn btn-shield-primary">Request Live Assessment</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. Cockroach Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/df.jpg" alt="Cockroach Control" loading="lazy" decoding="async">
-              <span class="treatment-badge">Residential & Commercial</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Cockroach Eradication</h4>
-                <p class="text-muted small mb-3">Gel baiting, insect growth regulators (IGR), and crack-and-crevice
-                  dusting for 100% nest elimination.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $99</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Termite Treatment -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/jjl.jpg" alt="Termite Treatment" loading="lazy" decoding="async">
-              <span class="treatment-badge">5-Year Warranty</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Termite Soil & Structure Defense</h4>
-                <p class="text-muted small mb-3">Subterranean liquid barriers, Sentricon baiting systems, and radar
-                  thermal colony detection.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $249</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Bed Bug Treatment -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/m c.jpg" alt="Bed Bug Eradication" loading="lazy" decoding="async">
-              <span class="treatment-badge">Thermal & Chemical</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Bed Bug Thermal Eradication</h4>
-                <p class="text-muted small mb-3">Heat treatment technology combined with eco-spray ensuring egg-to-adult
-                  elimination in a single session.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $189</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Rodent Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/mzmzm.jpg" alt="Rodent Control" loading="lazy" decoding="async">
-              <span class="treatment-badge">Proofing Included</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Rodent & Rat Extermination</h4>
-                <p class="text-muted small mb-3">Smart tamper-proof bait stations, ultrasonic deterrence, and complete
-                  building entry point seal-up.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $139</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Mosquito Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/nd.jpg" alt="Mosquito Fogging" loading="lazy" decoding="async">
-              <span class="treatment-badge">Garden & Lawn</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Mosquito & Fly Fogging</h4>
-                <p class="text-muted small mb-3">Cold thermal misting and larvicide water treatment to protect your
-                  backyard and outdoor events.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $119</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Ant Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/q.jpg" alt="Ant Eradication" loading="lazy" decoding="async">
-              <span class="treatment-badge">Colony Elimination</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Ant Colony Eradication</h4>
-                <p class="text-muted small mb-3">Non-repellent liquid barriers and sugar-protein baits that destroy
-                  subterranean queen colonies.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $89</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Spider Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="residential">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/qq.jpg" alt="Spider Removal" loading="lazy" decoding="async">
-              <span class="treatment-badge">Venomous Pest Barrier</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Spider & Venomous Pest Defense</h4>
-                <p class="text-muted small mb-3">De-webbing, perimeter micro-encapsulated spray barrier for black
-                  widows, brown recluse & spiders.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $109</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Bee & Wasp Removal -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="emergency">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/qqqq.jpg" alt="Bee Removal" loading="lazy" decoding="async">
-              <span class="treatment-badge">Humane Live Relocation</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Bee & Wasp Hive Relocation</h4>
-                <p class="text-muted small mb-3">Humane live honeybee extraction and nest neutralization for aggressive
-                  hornets and yellowjackets.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $129</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. Snake Rescue -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="emergency">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/qsw.jpg" alt="Snake Rescue" loading="lazy" decoding="async">
-              <span class="treatment-badge">24/7 Emergency Dispatch</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Snake Rescue & Perimeter Repellent</h4>
-                <p class="text-muted small mb-3">Emergency certified wildlife capture and application of snake-repellent
-                  perimeter granules.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Starts at $159</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. Commercial Pest Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="commercial">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/sssd.jpg" alt="Commercial Pest Control" loading="lazy" decoding="async">
-              <span class="treatment-badge">Audit-Ready Compliance</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Commercial Office & Facility Management</h4>
-                <p class="text-muted small mb-3">Discreet scheduled maintenance, digital logging, and zero-disruption
-                  after-hours treatments.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Custom Quote</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 11. Warehouse Pest Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="commercial">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/ssss.jpg" alt="Warehouse Fumigation" loading="lazy" decoding="async">
-              <span class="treatment-badge">Industrial Fumigation</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Warehouse & Cargo Container Fumigation</h4>
-                <p class="text-muted small mb-3">High-volume gas fumigation for stored product insects, beetles, and
-                  shipping container clearance.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Custom Quote</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 12. Restaurant Pest Control -->
-        <div class="col-md-6 col-lg-4 treatment-item" data-category="commercial">
-          <div class="treatment-card" data-tilt>
-            <div class="treatment-img-wrap">
-              <img src="image/sssss.jpg" alt="Restaurant Sanitation" loading="lazy" decoding="async">
-              <span class="treatment-badge">HACCP & Health Dept Safe</span>
-            </div>
-            <div class="p-4 d-flex flex-column justify-content-between flex-grow-1 text-center text-lg-start">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2">Restaurant & Food Service Sanitation</h4>
-                <p class="text-muted small mb-3">Bioremediation drain treatment, fly traps, and food-safe non-toxic
-                  kitchen pest prevention.</p>
-              </div>
-              <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                <span class="fw-bold text-teal">Custom Quote</span>
-                <a href="#book-inspection" class="btn btn-sm btn-shield-outline">Book Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4: HOW WE WORK (MODERN IMAGE PROCESS CARDS) -->
   <section class="py-5 bg-white position-relative">
     <div class="container py-4">
       <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="git-merge" style="width:16px;"></i> Our Process</span>
-        <h2 class="section-title">Step-by-Step Eradication Protocol</h2>
-        <p class="section-subtitle">A standardized 6-phase scientific approach ensuring thorough elimination and long-term protection.</p>
-      </div>
-
-      <div class="row g-4 gsap-stagger-container">
-        <!-- Step 1 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/wqw.jpg" alt="Thermal & Digital Inspection" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
-                Phase 01
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                1
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="scan" class="text-teal me-2" style="width:20px;"></i>Thermal & Digital Inspection</h4>
-                <p class="text-muted small mb-3">Certified technicians inspect walls, attics, moisture points, and hidden voids using infrared thermal scanners.</p>
-              </div>
-              <div class="pt-3 border-top small text-teal font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> Infrared Scans & Void Audits
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/df.jpg" alt="Pest Identification & Risk Analysis" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
-                Phase 02
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                2
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="microscope" class="text-teal me-2" style="width:20px;"></i>Pest ID & Risk Analysis</h4>
-                <p class="text-muted small mb-3">We pinpoint the exact pest species, nest origins, entry avenues, and environmental breeding triggers.</p>
-              </div>
-              <div class="pt-3 border-top small text-teal font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> Species Mapping & Nest Tracing
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/xcv.jpg" alt="Targeted Eco-Chemical Treatment" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
-                Phase 03
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                3
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="sparkles" class="text-teal me-2" style="width:20px;"></i>Targeted Eco Treatment</h4>
-                <p class="text-muted small mb-3">Application of odorless, botanical micro-encapsulated formulations, gel baits, and growth regulators.</p>
-              </div>
-              <div class="pt-3 border-top small text-teal font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> WHO Approved & Odorless
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/mzmzm.jpg" alt="Perimeter Exclusion & Barrier Sealing" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
-                Phase 04
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                4
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="shield-check" class="text-teal me-2" style="width:20px;"></i>Perimeter Exclusion Sealing</h4>
-                <p class="text-muted small mb-3">Sealing structural gaps, pipe penetrations, and installing protective barrier shields to stop re-entry.</p>
-              </div>
-              <div class="pt-3 border-top small text-teal font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> Entry Point Seal-up Guaranteed
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/cccc.jpg" alt="Post-Treatment Air Quality Audit" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-teal text-white font-heading px-3 py-2 rounded-pill fs-7">
-                Phase 05
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                5
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="activity" class="text-teal me-2" style="width:20px;"></i>Air Quality & Monitor Audit</h4>
-                <p class="text-muted small mb-3">Deployment of digital monitor traps and verification that indoor air quality remains 100% safe.</p>
-              </div>
-              <div class="pt-3 border-top small text-teal font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> Digital Trap Sensor Auditing
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="col-md-6 col-lg-4 gsap-stagger-item">
-          <div class="process-step-card h-100 d-flex flex-column justify-content-between">
-            <div class="process-step-img-wrap">
-              <img src="image/scj.jpg" alt="Official Shield Warranty Certificate" loading="lazy" decoding="async">
-              <div class="position-absolute top-0 start-0 m-3 badge bg-warning text-dark font-heading fw-bold px-3 py-2 rounded-pill fs-7">
-                Phase 06
-              </div>
-              <div class="position-absolute bottom-0 end-0 m-3 rounded-circle bg-dark text-white fw-bold d-flex align-items-center justify-content-center step-num-badge">
-                6
-              </div>
-            </div>
-            <div class="p-3 pt-4 d-flex flex-column flex-grow-1 justify-content-between">
-              <div>
-                <h4 class="h5 font-heading text-dark mb-2"><i data-lucide="award" class="text-warning me-2" style="width:20px;"></i>Shield Warranty Certificate</h4>
-                <p class="text-muted small mb-3">Issuance of official warranty certificate backed by free re-treatment guarantees if pests reappear.</p>
-              </div>
-              <div class="pt-3 border-top small text-warning font-heading fw-semibold">
-                <i data-lucide="check-circle-2" class="me-1" style="width:16px;"></i> Official Warranty Issued
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 5: SERVICE PACKAGES -->
-  <section id="packages" class="py-5 position-relative" style="background:var(--light-bg);">
-    <div class="container py-4">
-      <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="layers" style="width:16px;"></i> Maintenance Packages</span>
-        <h2 class="section-title">All-Inclusive Protection Plans</h2>
-        <p class="section-subtitle">Select the ideal service tier for continuous pest protection for your home or
-          business.</p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <!-- Basic Plan -->
-        <div class="col-md-6 col-lg-6 gsap-stagger-item">
-          <div class="package-card d-flex flex-column justify-content-between">
-            <div class="text-center text-lg-start">
-              <h3 class="h4 font-heading text-dark mb-1">Basic Shield</h3>
-              <p class="text-muted small mb-4">Essential quarterly pest protection for small apartments.</p>
-              <div class="display-6 font-heading fw-bold text-dark mb-1">$99<span
-                  class="fs-6 text-muted font-body fw-normal">/quarter</span></div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> General Insect
-                  Barrier</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Cockroach & Ant
-                  Control</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Exterior
-                  Perimeter Spray</li>
-                <li class="mb-2 text-muted opacity-50"><i data-lucide="x" style="width:16px;" class="me-2"></i> Termite
-                  Warranty</li>
-                <li class="mb-2 text-muted opacity-50"><i data-lucide="x" style="width:16px;" class="me-2"></i> Rodent
-                  Proofing</li>
-              </ul>
-            </div>
-            <a href="#book-inspection" class="btn btn-shield-outline w-100">Select Plan</a>
-          </div>
-        </div>
-
-        <!-- Standard Plan (Popular) -->
-        <div class="col-md-6 col-lg-6 gsap-stagger-item">
-          <div class="package-card popular d-flex flex-column justify-content-between">
-            <span class="popular-tag">Most Popular</span>
-            <div class="text-center text-lg-start">
-              <h3 class="h4 font-heading text-dark mb-1">Standard Guard</h3>
-              <p class="text-muted small mb-4">Comprehensive bi-monthly care for single family homes.</p>
-              <div class="display-6 font-heading fw-bold text-primary mb-1">$149<span
-                  class="fs-6 text-muted font-body fw-normal">/quarter</span></div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> All Basic Plan
-                  Features</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Rodent Baiting &
-                  Proofing</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Mosquito Lawn
-                  Barrier</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Free
-                  Re-treatment Warranty</li>
-                <li class="mb-2 text-muted opacity-50"><i data-lucide="x" style="width:16px;" class="me-2"></i> Termite
-                  Baiting System</li>
-              </ul>
-            </div>
-            <a href="#book-inspection" class="btn btn-shield-primary w-100">Select Plan</a>
-          </div>
-        </div>
-
-        <!-- Premium Fortress -->
-        <div class="col-md-6 col-lg-6 gsap-stagger-item">
-          <div class="package-card d-flex flex-column justify-content-between">
-            <div class="text-center text-lg-start">
-              <h3 class="h4 font-heading text-dark mb-1">Premium Fortress</h3>
-              <p class="text-muted small mb-4">Total monthly protection including termites & bed bugs.</p>
-              <div class="display-6 font-heading fw-bold text-dark mb-1">$229<span
-                  class="fs-6 text-muted font-body fw-normal">/quarter</span></div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> All Standard
-                  Features</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Termite Colony
-                  Monitoring</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Bed Bug Thermal
-                  Warranty</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> VIP 24/7
-                  Priority Hotline</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> 100% Money-Back
-                  Guarantee</li>
-              </ul>
-            </div>
-            <a href="#book-inspection" class="btn btn-shield-outline w-100">Select Plan</a>
-          </div>
-        </div>
-
-        <!-- Commercial Pro -->
-        <div class="col-md-6 col-lg-6 gsap-stagger-item">
-          <div class="package-card d-flex flex-column justify-content-between">
-            <div class="text-center text-lg-start">
-              <h3 class="h4 font-heading text-dark mb-1">Commercial Pro</h3>
-              <p class="text-muted small mb-4">Tailored for restaurants, warehouses, and corporate facilities.</p>
-              <div class="display-6 font-heading fw-bold text-dark mb-1">Custom</div>
-              <ul class="list-unstyled text-muted small my-4 text-start">
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Health Dept
-                  Compliance Logs</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Zero-Disruption
-                  After Hours</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Bioremediation
-                  Drain Care</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Dedicated
-                  Account Inspector</li>
-                <li class="mb-2"><i data-lucide="check" style="width:16px;" class="text-teal me-2"></i> Multi-site
-                  Discount Rates</li>
-              </ul>
-            </div>
-            <a href="#book-inspection" class="btn btn-shield-outline w-100">Request Quote</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 6: CHEMICAL SAFETY INFOGRAPHICS -->
-  <section id="safety" class="py-5 bg-white position-relative">
-    <div class="container py-4">
-      <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="heart-handshake" style="width:16px;"></i> Health & Safety</span>
-        <h2 class="section-title">Zero Toxic Residue Guarantee</h2>
-        <p class="section-subtitle">Our products are engineered to target pest biology specifically without leaving
-          harmful chemical fumes or residues in your living space.</p>
+        <span class="section-tag"><i data-lucide="check-circle" style="width:16px;"></i> The SafeShield Standard</span>
+        <h2 class="section-title">Why Leading Facilities & Families Choose Us</h2>
+        <p class="section-subtitle">We combine medical-grade entomology science, eco-friendly chemistries, and advanced technology to deliver uncompromised pest eradication.</p>
       </div>
 
       <div class="row g-4">
-        <!-- Safety Card 1 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="baby" style="width:36px; height:36px;"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i data-lucide="shield-check" style="width:28px; height:28px;"></i>
             </div>
-            <h4 class="h5 font-heading text-dark mb-2">Child & Newborn Safe</h4>
-            <p class="text-muted small mb-0">Micro-encapsulated formulations adhere only to pest exoskeletons, remaining
-              completely inert and safe around children's play areas.</p>
+            <h3 class="h4 font-heading mb-3">WHO & EPA Approved</h3>
+            <p class="text-muted mb-0">Our chemical formulations are globally recognized and fully certified for pediatric and healthcare safety standards.</p>
           </div>
         </div>
 
-        <!-- Safety Card 2 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="dog" style="width:36px; height:36px;"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i data-lucide="leaf" style="width:28px; height:28px;"></i>
             </div>
-            <h4 class="h5 font-heading text-dark mb-2">Pet-Friendly Formulations</h4>
-            <p class="text-muted small mb-0">Non-toxic to mammals including dogs, cats, and birds. Pets can safely
-              re-enter the home within 30 minutes of treatment.</p>
+            <h3 class="h4 font-heading mb-3">100% Odorless & Pet-Safe</h3>
+            <p class="text-muted mb-0">No need to vacate your home during application. Formulated with botanical derivatives safe for cats, dogs, and newborns.</p>
           </div>
         </div>
 
-        <!-- Safety Card 3 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="wind" style="width:36px; height:36px;"></i>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper mb-4">
+              <i data-lucide="clock" style="width:28px; height:28px;"></i>
             </div>
-            <h4 class="h5 font-heading text-dark mb-2">100% Odorless & Solvent-Free</h4>
-            <p class="text-muted small mb-0">No pungent chemical smells, head-aches, or staining on carpets, hardwood
-              floors, or luxury furniture fabrics.</p>
+            <h3 class="h4 font-heading mb-3">60-Min Emergency Response</h3>
+            <p class="text-muted mb-0">Active rapid dispatch teams across all metropolitan regions available 24/7/365 for immediate infestation response.</p>
           </div>
         </div>
+      </div>
 
-        <!-- Safety Card 4 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="shield-check" style="width:36px; height:36px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">WHO & EPA Registered</h4>
-            <p class="text-muted small mb-0">All solutions carry official World Health Organization classification and
-              Environmental Protection Agency regulatory approval.</p>
-          </div>
-        </div>
-
-        <!-- Safety Card 5 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="leaf" style="width:36px; height:36px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Eco Botanical Active Ingredients</h4>
-            <p class="text-muted small mb-0">Harvested from essential plant oils, pyrethrin flowers, and natural
-              minerals for sustainable pest defense.</p>
-          </div>
-        </div>
-
-        <!-- Safety Card 6 -->
-        <div class="col-md-6 col-lg-4 d-flex">
-          <div class="safety-card w-100 h-100" data-tilt>
-            <div class="safety-icon">
-              <i data-lucide="file-check-2" style="width:36px; height:36px;"></i>
-            </div>
-            <h4 class="h5 font-heading text-dark mb-2">Material Safety Data Sheets (MSDS)</h4>
-            <p class="text-muted small mb-0">Full transparency provided with official safety documentation and
-              compliance certificates for every service visit.</p>
-          </div>
-        </div>
+      <div class="text-center mt-5">
+        <a href="about.html" class="btn btn-shield-outline">
+          <i data-lucide="arrow-right" style="width:18px;"></i> Read More About Our Science & Standards
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 7: PRICING COMPARISON MATRIX -->
-  <section id="pricing" class="py-5 position-relative" style="background:var(--light-bg);">
+  <!-- SECTION 3: POPULAR TREATMENTS PREVIEW -->
+  <section class="py-5 position-relative" style="background:var(--light-bg);">
     <div class="container py-4">
-      <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="table" style="width:16px;"></i> Transparent Pricing Matrix</span>
-        <h2 class="section-title">Compare Features & Coverage</h2>
-        <p class="section-subtitle">Find the exact tier that fits your residential or commercial requirements.</p>
+      <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5">
+        <div>
+          <span class="section-tag"><i data-lucide="bug" style="width:16px;"></i> Targeted Defense</span>
+          <h2 class="section-title mb-2">Hospital-Grade Treatment Solutions</h2>
+          <p class="section-subtitle ms-0 mb-0">Precision treatment protocols tailored to every type of infestation.</p>
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="treatments.html" class="btn btn-shield-primary">
+            Explore All 12 Treatments <i data-lucide="arrow-right" style="width:18px;"></i>
+          </a>
+        </div>
       </div>
 
-      <div class="table-responsive glass-card p-3 p-lg-4">
-        <table class="table align-middle mb-0 text-center">
-          <thead>
-            <tr>
-              <th class="text-start fs-5 font-heading" style="width:35%;">Feature Comparison</th>
-              <th class="font-heading fs-6" style="width:16%;">Basic Shield</th>
-              <th class="font-heading fs-6 text-teal" style="width:16%;">Standard Guard</th>
-              <th class="font-heading fs-6 text-primary" style="width:16%;">Premium Fortress</th>
-              <th class="font-heading fs-6" style="width:17%;">Commercial Pro</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="text-start font-heading fw-medium">Thermal Imaging Site Scan</td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Exterior Perimeter Barrier</td>
-              <td>Quarterly</td>
-              <td>Bi-Monthly</td>
-              <td>Monthly</td>
-              <td>Weekly / Monthly</td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Cockroach & Ant Eradication</td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Rodent & Rat Exclusion</td>
-              <td><i data-lucide="minus" class="text-muted"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Mosquito & Fly Fogging</td>
-              <td><i data-lucide="minus" class="text-muted"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Termite Colony Baiting Warranty</td>
-              <td><i data-lucide="minus" class="text-muted"></i></td>
-              <td><i data-lucide="minus" class="text-muted"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Free Emergency Callouts</td>
-              <td>1 / Year</td>
-              <td>3 / Year</td>
-              <td>Unlimited</td>
-              <td>24/7 Priority</td>
-            </tr>
-            <tr>
-              <td class="text-start font-heading fw-medium">Official Certificate of Compliance</td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td><i data-lucide="check" class="text-success"></i></td>
-              <td>Health Dept Ready</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 8: STATISTICS -->
-  <section class="py-5 bg-white position-relative">
-    <div class="container py-4">
       <div class="row g-4">
-        <div class="col-6 col-lg-3 d-flex">
-          <div class="stats-box w-100 h-100" data-tilt>
-            <div class="stat-number" data-count="20" data-suffix="+">0</div>
-            <div class="text-muted font-heading small fw-bold text-uppercase">Years Experience</div>
+        <!-- Treatment 1: Termite -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card p-4 glass-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-teal-subtle text-teal px-3 py-2 rounded-pill font-heading fw-bold">Wood Defense</span>
+                <span class="text-muted small"><i data-lucide="clock" style="width:14px;"></i> 5-Year Warranty</span>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">Subterranean Termite Elimination</h3>
+              <p class="small text-muted mb-4">Precision soil barrier injections and acoustic void detection for comprehensive termite colony eradication.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="font-heading fw-bold text-teal">From $249</span>
+              <a href="book.html" class="btn btn-sm btn-shield-outline py-2 px-3">Book Service</a>
+            </div>
           </div>
         </div>
 
-        <div class="col-6 col-lg-3 d-flex">
-          <div class="stats-box w-100 h-100" data-tilt>
-            <div class="stat-number" data-count="10000" data-suffix="+">0</div>
-            <div class="text-muted font-heading small fw-bold text-uppercase">Homes Protected</div>
+        <!-- Treatment 2: Cockroach -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card p-4 glass-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-teal-subtle text-teal px-3 py-2 rounded-pill font-heading fw-bold">Bio-Barrier</span>
+                <span class="text-muted small"><i data-lucide="clock" style="width:14px;"></i> 180-Day Guarantee</span>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">German Cockroach Bio-Gel</h3>
+              <p class="small text-muted mb-4">Micro-encapsulated bait gel system targeting hidden breeding cavities with nest-eliminating domino efficacy.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="font-heading fw-bold text-teal">From $149</span>
+              <a href="book.html" class="btn btn-sm btn-shield-outline py-2 px-3">Book Service</a>
+            </div>
           </div>
         </div>
 
-        <div class="col-6 col-lg-3 d-flex">
-          <div class="stats-box w-100 h-100" data-tilt>
-            <div class="stat-number" data-count="500" data-suffix="+">0</div>
-            <div class="text-muted font-heading small fw-bold text-uppercase">Commercial Clients</div>
-          </div>
-        </div>
-
-        <div class="col-6 col-lg-3 d-flex">
-          <div class="stats-box w-100 h-100" data-tilt>
-            <div class="stat-number" data-count="99" data-suffix="%">0</div>
-            <div class="text-muted font-heading small fw-bold text-uppercase">Satisfaction Rate</div>
+        <!-- Treatment 3: Bed Bug -->
+        <div class="col-md-6 col-lg-4">
+          <div class="treatment-card p-4 glass-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="badge bg-teal-subtle text-teal px-3 py-2 rounded-pill font-heading fw-bold">Thermal Heat</span>
+                <span class="text-muted small"><i data-lucide="clock" style="width:14px;"></i> 100% Egg Kill</span>
+              </div>
+              <h3 class="h5 font-heading text-dark mb-2">Bed Bug Thermal Heat Treatment</h3>
+              <p class="small text-muted mb-4">Superheated dry steam and deep fabric penetration to eradicate adults, nymphs, and eggs in a single 12-hour session.</p>
+            </div>
+            <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-10">
+              <span class="font-heading fw-bold text-teal">From $299</span>
+              <a href="book.html" class="btn btn-sm btn-shield-outline py-2 px-3">Book Service</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 9: GALLERY (WITH LAZY LOADING) -->
-  <section id="gallery" class="py-5 position-relative" style="background:var(--light-bg);">
-    <div class="container py-4">
-      <div class="text-center mb-4 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="camera" style="width:16px;"></i> Visual Proof</span>
-        <h2 class="section-title">Our Work, Technicians & Equipment</h2>
-        <p class="section-subtitle">Real results from residential inspections, commercial fumigations, and eco
-          equipment.</p>
-
-        <!-- Gallery Filters -->
-        <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
-          <button class="btn btn-shield-primary active" data-gallery-filter="all">All Photos</button>
-          <button class="btn btn-shield-outline" data-gallery-filter="technicians">Technicians</button>
-          <button class="btn btn-shield-outline" data-gallery-filter="equipment">Equipment</button>
-          <button class="btn btn-shield-outline" data-gallery-filter="office">Office & Support</button>
-        </div>
-      </div>
-
-      <div class="row g-4 mt-2">
-        <!-- Photo 1 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="technicians">
-          <a href="image/wqw.jpg" class="glightbox gallery-item d-block">
-            <img src="image/wqw.jpg" alt="Technician Inspection" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Certified Technician Field Team</div>
-              <div class="text-teal small">Precision Inspection</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 2 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="equipment">
-          <a href="image/xcv.jpg" class="glightbox gallery-item d-block">
-            <img src="image/xcv.jpg" alt="Thermal Fogger Equipment" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Advanced Cold Thermal Fogger</div>
-              <div class="text-teal small">Micro-encapsulation System</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 3 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="office">
-          <a href="image/Office & Customer Support.jpg" class="glightbox gallery-item d-block">
-            <img src="image/Office & Customer Support.jpg" alt="Office Support" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">24/7 Client Care Center</div>
-              <div class="text-teal small">Customer Service Support</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 4 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="office">
-          <a href="image/cOffice & Customer Support.jpg" class="glightbox gallery-item d-block">
-            <img src="image/cOffice & Customer Support.jpg" alt="Dispatch Operations" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Emergency Dispatch Hub</div>
-              <div class="text-teal small">Rapid 60-Min Coordination</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 5 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="office">
-          <a href="image/xOffice & Customer Support.jpg" class="glightbox gallery-item d-block">
-            <img src="image/xOffice & Customer Support.jpg" alt="Client Support HQ" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Client Service Management</div>
-              <div class="text-teal small">Audit Certificate Processing</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 6 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="office">
-          <a href="image/Office & Customer SupportOffice & Customer SupportOffice & Customer Support.jpg"
-            class="glightbox gallery-item d-block">
-            <img src="image/Office & Customer SupportOffice & Customer SupportOffice & Customer Support.jpg"
-              alt="Corporate Office" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">SafeShield Corporate HQ</div>
-              <div class="text-teal small">Facility Command Center</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 7 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="equipment">
-          <a href="image/xxz.jpg" class="glightbox gallery-item d-block">
-            <img src="image/xxz.jpg" alt="Eco Baiting Unit" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Eco Gel Bait Station</div>
-              <div class="text-teal small">Child & Pet Safe Container</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 8 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="equipment">
-          <a href="image/cccc.jpg" class="glightbox gallery-item d-block">
-            <img src="image/cccc.jpg" alt="Air Quality Testing" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Indoor Air Quality Audit</div>
-              <div class="text-teal small">Post-Treatment Safety Sensor</div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Photo 9 -->
-        <div class="col-md-6 col-lg-4 gallery-col" data-category="technicians">
-          <a href="image/lll.jpg" class="glightbox gallery-item d-block">
-            <img src="image/lll.jpg" alt="Industrial Facility Treatment" loading="lazy" decoding="async">
-            <div class="gallery-overlay">
-              <div class="text-white font-heading fw-bold">Industrial Cargo Facility</div>
-              <div class="text-teal small">Container Gas Fumigation</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 10: TESTIMONIALS (WITH LAZY LOADING) -->
+  <!-- SECTION 4: STATISTICS COUNTER -->
   <section class="py-5 bg-white position-relative">
     <div class="container py-4">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-lg-3">
+          <div class="stats-box p-4 rounded-4 h-100">
+            <div class="stat-number font-heading fw-bold text-teal" data-count="10000" data-suffix="+">10,000+</div>
+            <div class="text-muted small fw-semibold">Properties Protected</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stats-box p-4 rounded-4 h-100">
+            <div class="stat-number font-heading fw-bold text-teal" data-count="99" data-suffix=".8%">99.8%</div>
+            <div class="text-muted small fw-semibold">Eradication Rate</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stats-box p-4 rounded-4 h-100">
+            <div class="stat-number font-heading fw-bold text-teal" data-count="45" data-suffix=" Min">45 Min</div>
+            <div class="text-muted small fw-semibold">Avg Emergency Dispatch</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stats-box p-4 rounded-4 h-100">
+            <div class="stat-number font-heading fw-bold text-teal" data-count="100" data-suffix="%">100%</div>
+            <div class="text-muted small fw-semibold">Odorless & Non-Toxic</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: TESTIMONIALS SWIPER -->
+  <section class="py-5 position-relative" style="background:var(--light-bg);">
+    <div class="container py-4">
       <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="message-square" style="width:16px;"></i> Verified Reviews</span>
-        <h2 class="section-title">What Our Clients Say About SafeShield</h2>
-        <p class="section-subtitle">Real experiences from homeowners, estate managers, and business owners.</p>
+        <span class="section-tag"><i data-lucide="star" style="width:16px;"></i> Verified Reviews</span>
+        <h2 class="section-title">Trusted by Thousands of Property Owners</h2>
+        <p class="section-subtitle">Real experiences from homeowners, healthcare clinics, and commercial partners.</p>
       </div>
 
-      <div class="swiper swiper-testimonials p-2">
+      <div class="swiper swiper-testimonials pb-5">
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex text-warning mb-3">
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                </div>
+                <p class="small text-muted mb-4">"SafeShield completely eliminated our German cockroach problem in one single visit. The treatment was completely odorless, and our two golden retrievers were totally safe!"</p>
               </div>
-              <p class="text-muted fstr-italic mb-4">"We had a major cockroach issue in our new villa. SafeShield sent a
-                certified team within 45 minutes. The treatment was completely odorless and our toddlers didn't have to
-                leave the house. 100% recommended!"</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonials.jpg" alt="Sarah Jenkins" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+              <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+                <img src="image/Testimonials.jpg" alt="Sarah Jenkins" class="rounded-circle" style="width:48px; height:48px; object-fit:cover;">
                 <div>
-                  <div class="font-heading fw-bold text-dark">Sarah Jenkins</div>
-                  <div class="text-muted small">Homeowner • Green Valley Villa</div>
+                  <div class="font-heading fw-bold text-dark small">Sarah Jenkins</div>
+                  <div class="text-muted" style="font-size:0.75rem;">Residential Homeowner</div>
                 </div>
               </div>
             </div>
@@ -1523,23 +586,22 @@
 
           <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex text-warning mb-3">
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                </div>
+                <p class="small text-muted mb-4">"As a pediatric clinic manager, safety is non-negotiable. SafeShield provided WHO and EPA certified documents, and their technicians were polite and thorough."</p>
               </div>
-              <p class="text-muted fstr-italic mb-4">"As a restaurant general manager, pest compliance is
-                non-negotiable. SafeShield handles our monthly commercial audit logs effortlessly. We passed our
-                municipality inspection with flying colors."</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonials;.jpg" alt="David Miller" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+              <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+                <img src="image/Testimonialss.jpg" alt="Dr. Marcus Vance" class="rounded-circle" style="width:48px; height:48px; object-fit:cover;">
                 <div>
-                  <div class="font-heading fw-bold text-dark">David Miller</div>
-                  <div class="text-muted small">General Manager • Artisan Dining Group</div>
+                  <div class="font-heading fw-bold text-dark small">Dr. Marcus Vance</div>
+                  <div class="text-muted" style="font-size:0.75rem;">Pediatric Clinic Director</div>
                 </div>
               </div>
             </div>
@@ -1547,92 +609,22 @@
 
           <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-              </div>
-              <p class="text-muted fstr-italic mb-4">"Their subterranean termite liquid barrier gave us 5 years of peace
-                of mind. The thermal imaging scan proved they eradicated the entire colony. Extremely professional
-                team!"</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonialsdd.jpg" alt="Elena Rostova" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
-                <div>
-                  <div class="font-heading fw-bold text-dark">Elena Rostova</div>
-                  <div class="text-muted small">Property Manager • Sunset Estates</div>
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex text-warning mb-3">
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
+                  <i data-lucide="star" style="width:18px;" class="fill-current"></i>
                 </div>
+                <p class="small text-muted mb-4">"We had a severe termite scare during a property sale. SafeShield arrived within 45 minutes, did a thermal scan, and saved the entire structure with zero disturbance."</p>
               </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-              </div>
-              <p class="text-muted fstr-italic mb-4">"Prompt, courteous, and highly knowledgeable. SafeShield resolved
-                our rodent issue in one visit and sealed every entrance gap."</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonialsddd.jpg" alt="Marcus Vance" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
+              <div class="d-flex align-items-center gap-3 pt-3 border-top border-secondary border-opacity-10">
+                <img src="image/Testimonialsdd.jpg" alt="David Sterling" class="rounded-circle" style="width:48px; height:48px; object-fit:cover;">
                 <div>
-                  <div class="font-heading fw-bold text-dark">Marcus Vance</div>
-                  <div class="text-muted small">Logistics Director • Apex Warehousing</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-              </div>
-              <p class="text-muted fstr-italic mb-4">"The thermal imaging scan and eco-friendly spray exceeded our
-                expectations. Our pets were safe and happy throughout!"</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonialss.jpg" alt="Amanda Sterling" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
-                <div>
-                  <div class="font-heading fw-bold text-dark">Amanda Sterling</div>
-                  <div class="text-muted small">Resident • Horizon Heights</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="swiper-slide">
-            <div class="testimonial-card">
-              <div class="d-flex align-items-center gap-1 text-warning mb-3">
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-                <i data-lucide="star" style="width:18px; fill:#f59e0b;"></i>
-              </div>
-              <p class="text-muted fstr-italic mb-4">"Best pest control service in town. Same day response and 100%
-                guarantee backed by official certificate."</p>
-              <div class="d-flex align-items-center gap-3">
-                <img src="image/Testimonialsx.jpg" alt="Robert Chen" loading="lazy" decoding="async"
-                  class="rounded-circle" style="width:50px; height:50px; object-fit:cover;">
-                <div>
-                  <div class="font-heading fw-bold text-dark">Robert Chen</div>
-                  <div class="text-muted small">Facility Operations • TechHub Campus</div>
+                  <div class="font-heading fw-bold text-dark small">David Sterling</div>
+                  <div class="text-muted" style="font-size:0.75rem;">Commercial Property Broker</div>
                 </div>
               </div>
             </div>
@@ -1643,308 +635,26 @@
     </div>
   </section>
 
-  <!-- SECTION 11: FAQ -->
-  <section id="faq" class="py-5 position-relative" style="background:var(--light-bg);">
+  <!-- SECTION 6: INSTANT CTA BANNER -->
+  <section class="py-5 bg-white position-relative">
     <div class="container py-4">
-      <div class="text-center mb-5 gsap-fade-up">
-        <span class="section-tag"><i data-lucide="help-circle" style="width:16px;"></i> Got Questions?</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Everything you need to know about our safety procedures, scheduling, and warranty
-          policies.</p>
-
-        <!-- FAQ Search Bar -->
-        <div class="max-w-600 mx-auto mt-4">
-          <div class="input-group input-group-lg shadow-sm rounded-pill overflow-hidden border">
-            <span class="input-group-text bg-white border-0 ps-4"><i data-lucide="search" class="text-muted"
-                style="width:20px;"></i></span>
-            <input type="text" id="faqSearchInput" class="form-control border-0 ps-2"
-              placeholder="Search questions (e.g. pets, warranty, prep)...">
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion accordion-custom max-w-800 mx-auto" id="safeshieldFAQAccordion">
-        <!-- FAQ 1 -->
-        <div class="accordion-item glass-card border-0 mb-3 overflow-hidden">
-          <h2 class="accordion-header" id="faqHead1">
-            <button class="accordion-button font-heading fw-bold bg-transparent shadow-none collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
-              Are your chemical treatments safe for pets and young children?
-            </button>
+      <div class="p-4 p-md-5 rounded-4 text-white text-center position-relative overflow-hidden shadow-lg"
+        style="background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);">
+        <div class="position-relative" style="z-index: 2;">
+          <span class="badge bg-warning text-dark px-3 py-2 rounded-pill font-heading fw-bold mb-3">Guaranteed Pest Eradication</span>
+          <h2 class="text-white font-heading fw-bold mb-3" style="font-size: clamp(1.8rem, 3.5vw, 2.5rem);">
+            Schedule Your Free Healthcare-Grade Property Inspection Today
           </h2>
-          <div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#safeshieldFAQAccordion">
-            <div class="accordion-body text-muted small pt-0">
-              Yes, absolutely. We use eco-botanical and micro-encapsulated formulations approved by WHO and EPA. Once
-              the liquid spray dries (typically 20-30 minutes), it binds securely to surfaces and poses zero threat to
-              pets or toddlers.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="accordion-item glass-card border-0 mb-3 overflow-hidden">
-          <h2 class="accordion-header" id="faqHead2">
-            <button class="accordion-button font-heading fw-bold bg-transparent shadow-none collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
-              Do we need to vacate the house during treatment?
-            </button>
-          </h2>
-          <div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#safeshieldFAQAccordion">
-            <div class="accordion-body text-muted small pt-0">
-              For standard residential cockroach, ant, and rodent gel treatments, you do NOT need to leave. For heavy
-              thermal bed bug treatments or full-building gas fumigations, brief 2-4 hour displacement may be required,
-              and your inspector will give you clear instructions beforehand.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="accordion-item glass-card border-0 mb-3 overflow-hidden">
-          <h2 class="accordion-header" id="faqHead3">
-            <button class="accordion-button font-heading fw-bold bg-transparent shadow-none collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
-              How soon can you dispatch a technician to my location?
-            </button>
-          </h2>
-          <div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#safeshieldFAQAccordion">
-            <div class="accordion-body text-muted small pt-0">
-              We offer same-day emergency dispatch. Our certified team can be at your door within 60 minutes for urgent
-              infestations or snake/wasp emergencies. Standard appointments can be booked for any convenient time slot.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="accordion-item glass-card border-0 mb-3 overflow-hidden">
-          <h2 class="accordion-header" id="faqHead4">
-            <button class="accordion-button font-heading fw-bold bg-transparent shadow-none collapsed" type="button"
-              data-bs-toggle="collapse" data-bs-target="#faqCollapse4">
-              What happens if pests return after the treatment?
-            </button>
-          </h2>
-          <div id="faqCollapse4" class="accordion-collapse collapse" data-bs-parent="#safeshieldFAQAccordion">
-            <div class="accordion-body text-muted small pt-0">
-              All SafeShield packages include our 100% Re-Treatment Guarantee. If any covered pests reappear within your
-              active warranty period, simply call us and our specialists will re-inspect and re-treat your property free
-              of charge.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 12: CONTACT & EMERGENCY HOTLINE BANNER -->
-  <section id="contact" class="py-5 bg-white position-relative">
-    <div class="container py-4">
-      <div class="row align-items-center g-4 glass-dark rounded-4 p-4 p-lg-5 mb-5 text-center text-lg-start">
-        <div class="col-lg-8">
-          <div class="badge bg-danger text-white mb-2 font-heading px-3 py-2 rounded-pill">
-            <i data-lucide="alert-triangle" style="width:16px;" class="me-1"></i> 24/7 Emergency Dispatch
-          </div>
-          <h3 class="font-heading text-white h2 mb-2">Facing an Urgent Pest Infestation?</h3>
-          <p class="text-light opacity-75 mb-0 fs-5">Speak directly to a certified medical entomologist on call now.
-            Guaranteed 60-minute arrival.</p>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <a href="tel:18005557443" class="btn btn-shield-accent btn-lg text-nowrap">
-            <i data-lucide="phone-call" style="width:20px;"></i> Call 1-800-555-SHIELD
-          </a>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-5 text-center text-lg-start">
-          <span class="section-tag"><i data-lucide="map-pin" style="width:16px;"></i> Reach Out</span>
-          <h2 class="section-title">Visit Our Headquarters</h2>
-          <p class="text-muted small mb-4">Our client service coordinators are available around the clock to answer your
-            queries and schedule property audits.</p>
-
-          <div class="d-flex flex-column gap-3">
-            <div class="d-flex align-items-center justify-content-start gap-3">
-              <div class="rounded-circle p-3 bg-teal-subtle text-teal flex-shrink-0">
-                <i data-lucide="map-pin" style="width:24px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold text-dark">Head Office Location</div>
-                <div class="text-muted small">450 Health & Tech Parkway, Suite 800</div>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-start gap-3">
-              <div class="rounded-circle p-3 bg-teal-subtle text-teal flex-shrink-0">
-                <i data-lucide="mail" style="width:24px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold text-dark">Email Support</div>
-                <div class="text-muted small">support@safeshieldpest.com</div>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-start gap-3">
-              <div class="rounded-circle p-3 bg-teal-subtle text-teal flex-shrink-0">
-                <i data-lucide="clock" style="width:24px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold text-dark">Operating Hours</div>
-                <div class="text-muted small">Mon - Sun: 24 Hours / 7 Days a Week</div>
-              </div>
-            </div>
-
-            <!-- Contact Section Social Channels -->
-            <div class="pt-3 border-top mt-2 text-start">
-              <div class="fw-semibold text-dark small mb-2 text-center text-lg-start">Connect With Our Team:</div>
-              <div class="d-flex justify-content-center justify-content-lg-start gap-2">
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Facebook" title="Facebook">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Instagram" title="Instagram">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Twitter / X" title="Twitter / X">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="LinkedIn" title="LinkedIn">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="YouTube" title="YouTube">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="rounded-4 overflow-hidden shadow-sm border border-secondary border-opacity-25 position-relative"
-            style="height:360px;">
-            <iframe title="SafeShield Office Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093747!2d144.9537363153166!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAxLjkiUyAxNDTCsDU3JzEzLjUiRQ!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            
-            <!-- Map Overlay Location Info Card -->
-            <div class="position-absolute bottom-0 start-0 m-3 p-3 glass-card rounded-4 shadow-lg border border-white d-flex align-items-center gap-3 map-overlay-card">
-              <div class="brand-icon rounded-circle flex-shrink-0" style="width:42px; height:42px;">
-                <i data-lucide="map-pin" style="width:20px;"></i>
-              </div>
-              <div class="text-start">
-                <div class="fw-bold text-dark small">SafeShield HQ</div>
-                <div class="text-muted" style="font-size:0.75rem;">450 Health & Tech Parkway, Suite 800</div>
-                <a href="https://maps.google.com" target="_blank" rel="noopener" class="small text-teal fw-semibold text-decoration-none">Open Directions <i data-lucide="external-link" style="width:12px;"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 13: VISIT BOOKING FORM -->
-  <section id="book-inspection" class="py-5 position-relative" style="background:var(--light-bg);">
-    <div class="container py-4">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          <div class="booking-card">
-            <div class="text-center mb-4">
-              <span class="section-tag"><i data-lucide="calendar-check" style="width:16px;"></i> Instant Booking</span>
-              <h2 class="section-title">Schedule Your Free Site Inspection</h2>
-              <p class="section-subtitle">Select your property details below for an instant estimated price quote and
-                technician assignment.</p>
-            </div>
-
-            <form id="safeshieldBookingForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Full Name *</label>
-                  <input type="text" class="form-control form-control-custom" required placeholder="John Doe">
-                </div>
-
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Phone Number *</label>
-                  <input type="tel" class="form-control form-control-custom" required placeholder="+1 (555) 000-0000">
-                </div>
-
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Email Address *</label>
-                  <input type="email" class="form-control form-control-custom" required placeholder="john@example.com">
-                </div>
-
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Property Address *</label>
-                  <input type="text" class="form-control form-control-custom" required placeholder="Street, City, Zip">
-                </div>
-
-                <div class="col-md-4">
-                  <label class="form-label font-heading fw-bold small text-dark">Property Type *</label>
-                  <select id="calcPropertyType" class="form-select form-select-custom" required>
-                    <option value="apartment">Apartment (1-3 Bed)</option>
-                    <option value="villa">Villa / Single Family Home</option>
-                    <option value="commercial">Commercial / Office</option>
-                    <option value="warehouse">Industrial Warehouse</option>
-                  </select>
-                </div>
-
-                <div class="col-md-4">
-                  <label class="form-label font-heading fw-bold small text-dark">Primary Pest Concern *</label>
-                  <select id="calcPestType" class="form-select form-select-custom" required>
-                    <option value="cockroach">Cockroaches</option>
-                    <option value="termite">Termites</option>
-                    <option value="bedbug">Bed Bugs</option>
-                    <option value="rodent">Rats & Rodents</option>
-                    <option value="mosquito">Mosquitoes</option>
-                    <option value="general">General Pest Control</option>
-                  </select>
-                </div>
-
-                <div class="col-md-4">
-                  <label class="form-label font-heading fw-bold small text-dark">Preferred Package *</label>
-                  <select id="calcPackage" class="form-select form-select-custom" required>
-                    <option value="basic">Basic Shield</option>
-                    <option value="standard" selected>Standard Guard (Popular)</option>
-                    <option value="premium">Premium Fortress</option>
-                    <option value="commercial">Commercial Pro</option>
-                  </select>
-                </div>
-
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Preferred Date *</label>
-                  <input type="date" class="form-control form-control-custom" required>
-                </div>
-
-                <div class="col-md-6">
-                  <label class="form-label font-heading fw-bold small text-dark">Preferred Time Window *</label>
-                  <select class="form-select form-select-custom" required>
-                    <option value="morning">Morning (08:00 AM - 12:00 PM)</option>
-                    <option value="afternoon">Afternoon (12:00 PM - 04:00 PM)</option>
-                    <option value="evening">Evening (04:00 PM - 08:00 PM)</option>
-                  </select>
-                </div>
-
-                <div class="col-12">
-                  <label class="form-label font-heading fw-bold small text-dark">Special Instructions / Notes</label>
-                  <textarea class="form-control form-control-custom" rows="3"
-                    placeholder="Specify nest locations, pets in house, gate access codes..."></textarea>
-                </div>
-
-                <!-- Live Price Estimate Banner -->
-                <div class="col-12 mt-4">
-                  <div
-                    class="glass-card p-3 p-sm-4 d-flex align-items-center justify-content-between text-start gap-3">
-                    <div>
-                      <div class="fw-bold text-dark">Estimated Service Investment</div>
-                      <div class="text-muted small">Includes initial thermal inspection & warranty certificate</div>
-                    </div>
-                    <div class="font-heading fw-bold text-teal flex-shrink-0" id="liveEstimatePrice" style="font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1; margin: 0;">$149</div>
-                  </div>
-                </div>
-
-                <div class="col-12 text-center mt-4">
-                  <button type="submit" class="btn btn-shield-primary btn-lg w-100">
-                    <i data-lucide="check-circle" style="width:20px;"></i> Confirm Inspection Request
-                  </button>
-                </div>
-              </div>
-            </form>
+          <p class="text-white-50 max-w-600 mx-auto mb-4 fs-6">
+            Get an instant thermal assessment and customized eco-shield treatment plan backed by our 100% money-back guarantee.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="book.html" class="btn btn-shield-accent btn-lg">
+              <i data-lucide="calendar-check" style="width:20px;"></i> Book Free Inspection
+            </a>
+            <a href="tel:18005557443" class="btn btn-shield-outline text-white btn-lg" style="border-color: rgba(255,255,255,0.4); color:#FFF !important;">
+              <i data-lucide="phone-call" style="width:20px;"></i> Call 1-800-555-SHIELD
+            </a>
           </div>
         </div>
       </div>
@@ -1956,65 +666,67 @@
     <div class="container">
       <div class="row g-4 mb-5 text-center text-lg-start">
         <div class="col-lg-4">
-          <div class="brand-logo text-white justify-content-center justify-content-lg-start mb-3">
+          <a class="brand-logo text-decoration-none justify-content-center justify-content-lg-start mb-3" href="index.html">
             <div class="brand-icon">
-              <i data-lucide="shield-check" style="width:22px;"></i>
+              <i data-lucide="shield-check" style="width:20px; height:20px;"></i>
             </div>
-            <span>SafeShield</span>
-          </div>
+            <span class="brand-text footer-brand-text">Safe<span class="text-teal">Shield</span></span>
+          </a>
           <p class="small text-muted mb-4">SafeShield is an industry-leading healthcare and technology-driven pest
             control brand providing eco-friendly, WHO-approved fumigation & bio-barrier protection.</p>
           <div class="d-flex justify-content-center justify-content-lg-start gap-2">
             <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Facebook" title="Facebook">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Instagram" title="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="Twitter / X" title="Twitter / X">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="X (Twitter)" title="X (Twitter)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="LinkedIn" title="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-social-icon" aria-label="YouTube" title="YouTube">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
             </a>
           </div>
         </div>
 
         <div class="col-6 col-lg-2">
-          <h5 class="font-heading text-white fs-6 mb-3">Navigation</h5>
+          <h5 class="font-heading text-white fs-6 mb-3">Quick Navigation</h5>
           <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
-            <li><a href="#home" class="text-muted">Home</a></li>
-            <li><a href="#about" class="text-muted">About Us</a></li>
-            <li><a href="#treatments" class="text-muted">Treatments</a></li>
-            <li><a href="#packages" class="text-muted">Packages</a></li>
-            <li><a href="#safety" class="text-muted">Chemical Safety</a></li>
+            <li><a href="index.html" class="text-muted">Home 1 (Healthcare)</a></li>
+            <li><a href="home-2.html" class="text-muted">Home 2 (Emergency)</a></li>
+            <li><a href="about.html" class="text-muted">About Us</a></li>
+            <li><a href="treatments.html" class="text-muted">Treatments</a></li>
+            <li><a href="packages.html" class="text-muted">Packages</a></li>
+            <li><a href="safety.html" class="text-muted">Chemical Safety</a></li>
+            <li><a href="pricing.html" class="text-muted">Pricing Matrix</a></li>
+            <li><a href="contact.html" class="text-muted">Contact Us</a></li>
           </ul>
         </div>
 
         <div class="col-6 col-lg-2">
           <h5 class="font-heading text-white fs-6 mb-3">Pest Solutions</h5>
           <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
-            <li><a href="#treatments" class="text-muted">Termite Control</a></li>
-            <li><a href="#treatments" class="text-muted">Cockroach Defense</a></li>
-            <li><a href="#treatments" class="text-muted">Bed Bug Eradication</a></li>
-            <li><a href="#treatments" class="text-muted">Rodent Proofing</a></li>
-            <li><a href="#treatments" class="text-muted">Mosquito Fogging</a></li>
+            <li><a href="treatments.html" class="text-muted">Termite Defense</a></li>
+            <li><a href="treatments.html" class="text-muted">Cockroach Bio-Barrier</a></li>
+            <li><a href="treatments.html" class="text-muted">Bed Bug Thermal Heat</a></li>
+            <li><a href="treatments.html" class="text-muted">Rodent Exclusion</a></li>
+            <li><a href="treatments.html" class="text-muted">Mosquito Fogging</a></li>
+            <li><a href="treatments.html" class="text-muted">Commercial Fumigation</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 text-center text-lg-start">
           <h5 class="font-heading text-white fs-6 mb-3">Newsletter & Safety Updates</h5>
-          <p class="small text-muted mb-3">Subscribe to receive quarterly seasonal pest alerts and homeowner protection
-            guides.</p>
+          <p class="small text-muted mb-3">Subscribe to receive quarterly seasonal pest alerts and homeowner protection guides.</p>
           <div class="footer-newsletter-box mb-3">
             <input type="email" class="form-control form-control-custom" placeholder="Enter your email">
             <button class="btn btn-shield-primary" type="button">Subscribe</button>
           </div>
-          <div class="small text-muted" style="font-size:0.75rem;">© 2026 SafeShield Pest Control LLC. All rights
-            reserved. Registered Pest Control License #PC-88492.</div>
+          <div class="small text-muted" style="font-size:0.75rem;">© 2026 SafeShield Pest Control LLC. All rights reserved. Registered Pest Control License #PC-88492.</div>
         </div>
       </div>
     </div>
@@ -2025,25 +737,9 @@
     <button id="scrollTopBtn" class="fab-btn fab-scroll-top" aria-label="Scroll to top" title="Scroll to Top">
       <i data-lucide="arrow-up" style="width:20px; height:20px;"></i>
     </button>
-    <a href="https://wa.me/15550000000" target="_blank" class="fab-btn fab-whatsapp" aria-label="WhatsApp Chat" title="WhatsApp Chat">
-      <i data-lucide="message-circle" style="width:24px; height:24px;"></i>
+    <a href="https://wa.me/15550000000" target="_blank" rel="noopener" class="fab-btn fab-whatsapp" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
-  </div>
-
-  <!-- BOOKING CONFIRMATION MODAL -->
-  <div class="modal fade" id="bookingSuccessModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content glass-card border-0 p-4 text-center">
-        <div class="rounded-circle bg-teal-subtle text-teal p-3 mx-auto mb-3"
-          style="width:70px; height:70px; display:flex; align-items:center; justify-content:center;">
-          <i data-lucide="check-circle-2" style="width:40px; height:40px;"></i>
-        </div>
-        <h3 class="font-heading text-dark h4 mb-2">Inspection Requested!</h3>
-        <p class="text-muted small mb-4">Thank you for choosing SafeShield. Our certified entomologist will call you
-          within 15 minutes to confirm your preferred arrival time.</p>
-        <button type="button" class="btn btn-shield-primary px-4" data-bs-dismiss="modal">Great, Thank You</button>
-      </div>
-    </div>
   </div>
 
   <!-- Lucide Icons CDN -->

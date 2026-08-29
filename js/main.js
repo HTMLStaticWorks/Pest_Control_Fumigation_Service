@@ -457,77 +457,73 @@ function initRiskCalculator() {
   });
 }
 
-/* Dynamic ScrollSpy for Navbar Links across All Sections */
+/* Dynamic Navigation Active State for Multi-page & Section Navigation */
 function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.desktop-nav-menu .nav-link-custom, .mobile-nav-list .mobile-nav-link, .mobile-nav-sublink, .dropdown-menu-custom .dropdown-item');
   const homeDropdown = document.getElementById('homeDropdown');
+  const sections = document.querySelectorAll('section[id]');
 
-  if (!sections.length || !navLinks.length) return;
-
-  // Map sub-sections and intermediate sections to primary navbar targets
-  const sectionMenuMap = {
-    'home': 'home',
-    'home1-diagnostic': 'home',
-    'home1-workflow': 'home',
-    'home2': 'home2',
-    'about': 'about',
-    'treatments': 'treatments',
-    'packages': 'packages',
-    'safety': 'safety',
-    'pricing': 'pricing',
-    'gallery': 'treatments',
-    'contact': 'contact',
-    'book-inspection': 'contact'
-  };
-
-  function updateActiveLink() {
-    let scrollPos = window.scrollY + 180;
-    let detectedSectionId = '';
-
-    // Check if user is near the bottom of the page
-    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
-      detectedSectionId = 'contact';
-    } else {
-      sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        const id = section.getAttribute('id');
-
-        if (scrollPos >= top && scrollPos < top + height) {
-          detectedSectionId = id;
-        }
-      });
+  // Multi-page route matching
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href') || '';
+    const cleanHref = href.split('#')[0];
+    if (cleanHref && (cleanHref === currentPath || (currentPath === '' && cleanHref === 'index.html'))) {
+      link.classList.add('active');
     }
+  });
 
-    // Default to home if near the top
-    if (!detectedSectionId && window.scrollY < 300) {
-      detectedSectionId = 'home';
-    }
-
-    const primaryTargetId = sectionMenuMap[detectedSectionId] || detectedSectionId;
-
-    navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === '#' + primaryTargetId || href === '#' + detectedSectionId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-
-    // Highlight Home dropdown whenever any Home section is active
-    if (homeDropdown) {
-      if (primaryTargetId === 'home' || primaryTargetId === 'home2') {
-        homeDropdown.classList.add('active');
-      } else {
-        homeDropdown.classList.remove('active');
-      }
-    }
+  if (homeDropdown && (currentPath === 'index.html' || currentPath === 'home-2.html' || currentPath === '')) {
+    homeDropdown.classList.add('active');
   }
 
-  window.addEventListener('scroll', updateActiveLink, { passive: true });
-  updateActiveLink();
+  // If page has multiple section anchors, enable smooth scroll spy
+  if (sections.length > 3) {
+    const sectionMenuMap = {
+      'home': 'home',
+      'home1-diagnostic': 'home',
+      'home1-workflow': 'home',
+      'home2': 'home2',
+      'about': 'about',
+      'treatments': 'treatments',
+      'packages': 'packages',
+      'safety': 'safety',
+      'pricing': 'pricing',
+      'gallery': 'treatments',
+      'contact': 'contact',
+      'book-inspection': 'contact'
+    };
+
+    function updateActiveLink() {
+      let scrollPos = window.scrollY + 180;
+      let detectedSectionId = '';
+
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        detectedSectionId = 'contact';
+      } else {
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
+          if (scrollPos >= top && scrollPos < top + height) {
+            detectedSectionId = id;
+          }
+        });
+      }
+
+      if (detectedSectionId) {
+        const primaryTargetId = sectionMenuMap[detectedSectionId] || detectedSectionId;
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href') || '';
+          if (href === '#' + primaryTargetId || href === '#' + detectedSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+  }
 }
 
 /* Scroll To Top Floating Button Handler */
