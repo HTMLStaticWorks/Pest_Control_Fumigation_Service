@@ -1535,7 +1535,7 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
 }
 [data-theme="dark"] .hero-floating-card .text-dark,
 [data-theme="dark"] .hero-floating-card .fw-bold,
-[data-theme="dark"] .hero-floating-card div {
+[data-theme="dark"] .hero-floating-card > div:not(.rounded-circle) {
   color: #FFFFFF !important;
 }
 [data-theme="dark"] .hero-floating-card .text-muted {
@@ -1843,8 +1843,8 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
   color: #FFFFFF !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
 }
-.hero-home2-redesign .glass-dark *,
-.hero-home2-redesign .hero-floating-card * {
+.hero-home2-redesign .glass-dark > div:not(.rounded-circle),
+.hero-home2-redesign .hero-floating-card > div:not(.rounded-circle) {
   color: #FFFFFF;
 }
 .hero-home2-redesign .glass-dark .text-white,
@@ -1874,6 +1874,68 @@ html[dir="rtl"] .testimonial-card .d-flex.align-items-center {
 .hero-home2-redesign .hero-floating-card .small {
   color: #E2E8F0 !important;
   opacity: 1 !important;
+}
+
+/* Floating Badges Icon Contrast in Hero Cards */
+.hero-floating-card .rounded-circle {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-floating-card .bg-success-subtle,
+.hero-home2-redesign .hero-floating-card .bg-success-subtle {
+  background: rgba(16, 185, 129, 0.2) !important;
+  border: 1.5px solid rgba(52, 211, 153, 0.45) !important;
+}
+.hero-floating-card .text-success,
+.hero-floating-card .text-success *,
+.hero-floating-card .text-success i,
+.hero-floating-card .text-success svg,
+.hero-home2-redesign .hero-floating-card .text-success,
+.hero-home2-redesign .hero-floating-card .text-success *,
+.hero-home2-redesign .hero-floating-card .text-success i,
+.hero-home2-redesign .hero-floating-card .text-success svg {
+  color: #34D399 !important;
+  stroke: #34D399 !important;
+}
+
+.hero-floating-card .bg-warning-subtle,
+.hero-home2-redesign .hero-floating-card .bg-warning-subtle {
+  background: rgba(245, 158, 11, 0.2) !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.45) !important;
+}
+.hero-floating-card .text-warning,
+.hero-floating-card .text-warning *,
+.hero-floating-card .text-warning i,
+.hero-floating-card .text-warning svg,
+.hero-home2-redesign .hero-floating-card .text-warning,
+.hero-home2-redesign .hero-floating-card .text-warning *,
+.hero-home2-redesign .hero-floating-card .text-warning i,
+.hero-home2-redesign .hero-floating-card .text-warning svg {
+  color: #FBBF24 !important;
+  stroke: #FBBF24 !important;
+}
+
+.hero-floating-card .bg-teal-subtle,
+.hero-home2-redesign .hero-floating-card .bg-teal-subtle {
+  background: rgba(45, 212, 191, 0.2) !important;
+  border: 1.5px solid rgba(45, 212, 191, 0.45) !important;
+}
+.hero-floating-card .text-teal,
+.hero-floating-card .text-teal *,
+.hero-floating-card .text-teal i,
+.hero-floating-card .text-teal svg,
+.hero-home2-redesign .hero-floating-card .text-teal,
+.hero-home2-redesign .hero-floating-card .text-teal *,
+.hero-home2-redesign .hero-floating-card .text-teal i,
+.hero-home2-redesign .hero-floating-card .text-teal svg {
+  color: #2DD4BF !important;
+  stroke: #2DD4BF !important;
 }
 
 .btn-shield-accent {
